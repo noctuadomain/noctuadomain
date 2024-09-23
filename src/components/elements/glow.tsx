@@ -16,4 +16,4 @@ const Glow: React.FC<ClassProps> = ({ className }) => {
   );
 };
 
-export default Glow;
+export default React.memo(Glow);

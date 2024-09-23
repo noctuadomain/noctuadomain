@@ -20,9 +20,9 @@ body {
   font-family: var(--font-space-grotesk), 'system-ui';
 }
 
-html {
+/*html {
   scroll-behavior: smooth;
-}
+}*/
 
 a:focus {
   outline: none;
@@ -37,4 +37,24 @@ a:focus-visible {
 img {
   user-select: none;
   pointer-events: none;
+}
+
+.text-gradient {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-orange {
+  background: linear-gradient(to right, #E1A23A 0%, #F6681E 100%);
+  @apply text-gradient;
+}
+
+.text-gradient-red-to-blue {
+  background: linear-gradient(to right, #95413B 0%, #371C58 50%, #0A55CD 100%);
+  @apply text-gradient;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(to right, #263284 0%, #0A55CD 100%);
+  @apply text-gradient;
 }

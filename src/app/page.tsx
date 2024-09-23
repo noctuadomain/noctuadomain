@@ -2,13 +2,16 @@ import React from 'react';
 
 import Header from '@/components/elements/header';
 import Hero from '@/components/elements/hero';
+import AboutUs from '@/components/elements/about-us';
+import Showreel from '@/components/elements/showreel';
 
 const Home: React.FC = () => {
   return (
     <div className="overflow-hidden">
       <Header />
       <Hero />
-      <div className="h-[2000px]"></div>
+      <AboutUs />
+      <Showreel />
     </div>
   );
 };
