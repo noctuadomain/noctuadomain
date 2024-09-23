@@ -1,27 +1,30 @@
+@import url('@/assets/config-styles/reset.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  :root {
+    --font-space-grotesk: 'Space Grotesk', 'system-ui';
+    --font-sora: 'Sora', 'system-ui';
+    --font-phosphate: 'Phosphate', 'system-ui';
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+input, textarea, select, button, option {
+  font-family: var(--font-space-grotesk), 'system-ui';
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-space-grotesk), 'system-ui';
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+#root {
+  font-weight: 400;
+  overflow: hidden; /* If need to use 'position: sticky' - set 'overflow: clip' */
+}
+
+html {
+  scroll-behavior: smooth;
 }
