@@ -20,11 +20,21 @@ body {
   font-family: var(--font-space-grotesk), 'system-ui';
 }
 
-#root {
-  font-weight: 400;
-  overflow: hidden; /* If need to use 'position: sticky' - set 'overflow: clip' */
-}
-
 html {
   scroll-behavior: smooth;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-offset: 2px;
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
 }

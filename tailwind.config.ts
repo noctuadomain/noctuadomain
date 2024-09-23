@@ -10,6 +10,12 @@ const config: Config = {
   ],
   theme: {
     screens: {
+      '3xl': {
+        max: '1840px'
+      },
+      '2xl': {
+        max: '1440px'
+      },
       xl: {
         max: '1280px'
       },
@@ -29,7 +35,9 @@ const config: Config = {
         sm: '100%',
         md: '768px',
         lg: '1024px',
-        xl: '1280px'
+        xl: '1280px',
+        '2xl': '1440px',
+        '3xl': '1840px'
       }
     },
     extend: {
