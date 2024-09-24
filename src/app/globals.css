@@ -66,17 +66,21 @@ img {
 }
 
 .review-outer-gradient {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.16) 0%, rgba(83, 84, 108, 0.16) 100%);
+  background: linear-gradient(51deg, rgba(0, 0, 0, 0.16) 0%, rgba(83, 84, 108, 0.16) 100%);
   backdrop-filter: blur(16px);
 }
 
 .review-inner-gradient {
-  background: linear-gradient(to right, #0E1117 0%, #1C1F29 100%);
+  background: linear-gradient(47deg, rgba(51, 51, 62, 0.16) 0%, rgba(83, 84, 108, 0.16) 100%);
   backdrop-filter: blur(16px);
 }
 
-.primary_btn_hover:hover {
+.primary-btn-hover:hover {
   box-shadow: 0 4px 20px 0 #fff;
+}
+
+.outline-btn-hover:hover {
+  box-shadow: 0 2px 20px 0 #3ADCFF95;
 }
 
 /* btn flip animation */

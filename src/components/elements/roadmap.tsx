@@ -6,6 +6,7 @@ import Button from '@/components/ui/button';
 
 import { ClassProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
+import Play from '@/components/ui/play';
 
 const Roadmap: React.FC<ClassProps> = ({ className }) => {
   return (
@@ -22,8 +23,8 @@ const Roadmap: React.FC<ClassProps> = ({ className }) => {
             the fun video, complete with cool visuals and sounds, that shows
             every exciting step we take!
           </p>
-          <Button className="px-7" variant="outline">
-            <Image className="mr-3" src="/icons/play.svg" alt="play" width={11} height={13} />
+          <Button className="px-7 group/button" variant="outline">
+            <Play className="mr-3" />
             Watch a demo
           </Button>
         </div>
