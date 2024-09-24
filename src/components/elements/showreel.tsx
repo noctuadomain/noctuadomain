@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 
 const Showreel: React.FC<ClassProps> = ({ className }) => {
   return (
-    <div className={cn('container flex-center pt-16 pb-44', className)}>
+    <section className={cn('container flex-center pt-16 pb-44', className)} id="showreel">
       <video
         src="/showreel.mp4"
         width={1680}
@@ -14,7 +14,7 @@ const Showreel: React.FC<ClassProps> = ({ className }) => {
         loop
         poster="/poster.jpg"
       />
-    </div>
+    </section>
   );
 };
 

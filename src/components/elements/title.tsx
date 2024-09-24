@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { ComponentProps } from 'react';
+
 import { ClassProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
 
-interface TitleProps extends ClassProps {
+interface TitleProps extends ClassProps, ComponentProps<'div'> {
   title: string;
   description: string;
 }
 
-const Title: React.FC<TitleProps> = ({ className, title, description }) => {
+const Title: React.FC<TitleProps> = ({ className, title, description, ...props }) => {
   return (
-    <div className={cn('container py-16 uppercase text-center font-phosphate', className)}>
+    <div className={cn('container py-16 uppercase text-center font-phosphate', className)} {...props}>
       <h2 className="text-[96px] mb-5">{title}</h2>
       <h3 className="text-5xl">{description}</h3>
     </div>

@@ -16,26 +16,29 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
         <h1 className="text-[155px] font-phosphate leading-[0.85]">ANIMATION STUDIO</h1>
         <p className="font-light text-xl mb-20">All you need to do is trust our extensive experience and enjoy the journey. Share your thoughts with us, and we will start building your story today.</p>
         <div className="flex gap-5">
-          <Button className="px-10">
-            Contact Us
+          <Button
+            className="px-10 hover:transition-shadow hover:duration-300 group flip-animate">
+            <span data-hover="Get in touch">Contact Us</span>
             <Image
-              className="ml-6"
+              className="ml-6 group-hover:translate-x-3 transition-transform duration-300"
               src="/icons/arrow-right.svg"
               alt="arrow-right"
               width={36}
               height={24}
             />
           </Button>
-          <Button className="px-10" variant="ghost">
-            <Image
-              className="mr-6"
-              src="/icons/play-in-circle.svg"
-              alt="play-in-circle"
-              width={32}
-              height={32}
-            />
-            Watch video
-          </Button>
+          <a href="#showreel">
+            <Button className="px-10 group" variant="ghost">
+              <Image
+                className="mr-6 group-hover:scale-[1.15] group-hover:transition-transform group-hover:duration-300"
+                src="/icons/play-in-circle.svg"
+                alt="play-in-circle"
+                width={32}
+                height={32}
+              />
+              Watch video
+            </Button>
+          </a>
         </div>
       </div>
       <Image src="/owl_halfmoon.png" alt="owl-halfmoon" width={900} height={900}/>

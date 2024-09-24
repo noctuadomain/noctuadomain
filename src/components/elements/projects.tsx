@@ -4,9 +4,9 @@ import { cn } from '@/lib/utils';
 
 const Projects: React.FC<ClassProps> = ({ className }) => {
   return (
-    <div className={cn('', className)}>
+    <section className={cn('', className)} id="portfolio">
     
-    </div>
+    </section>
   );
 };
 

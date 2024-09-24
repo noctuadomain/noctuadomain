@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 const Glow: React.FC<ClassProps> = ({ className }) => {
   return (
     <div
-      className={cn('absolute w-72 h-96 filter blur-3xl -rotate-45 -z-50', className)}>
+      className={cn('absolute w-72 h-96 filter blur-[80px] -rotate-45 -z-50', className)}>
       <div
         className="w-full h-full rounded-full shadow-lg"
         style={{

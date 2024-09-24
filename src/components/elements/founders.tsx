@@ -12,8 +12,9 @@ const Founders: React.FC<ClassProps> = ({ className }) => {
       <Title
         title="founders"
         description="we pride ourselves on being professionals who excel at every stage of production"
+        id="about-us"
       />
-      <div className={cn('container flex justify-between gap-10 my-32', className)}>
+      <section className={cn('container flex justify-between gap-10 my-32', className)}>
         <div className="max-w-[480px] font-light py-[284px]">
           <p className="text-2xl mb-4">
             <strong className="font-bold">KYRYLO:</strong> Co-founder, VFX
@@ -29,7 +30,7 @@ const Founders: React.FC<ClassProps> = ({ className }) => {
             project.
           </p>
         </div>
-        <Image className="object-contain" src="/founders.jpg" alt="founders" width={640} height={826} quality={100}/>
+        <Image src="/founders.jpg" alt="founders" width={640} height={826} quality={100}/>
         <div className="max-w-[480px] font-light py-[284px]">
           <p className="text-2xl mb-4">
             <strong className="font-bold">MARIIA:</strong> Co-founder, Manager
@@ -38,7 +39,7 @@ const Founders: React.FC<ClassProps> = ({ className }) => {
             Maria&apos;s journey in the industry is a testament to her dedication and expertise. Starting as a project manager, she has risen to become the production manager, now fully running the studio. With 7 years of experience, Maria&apos;s leadership and vision drive our projects to excellence.
           </p>
         </div>
-      </div>
+      </section>
     </>
   );
 };

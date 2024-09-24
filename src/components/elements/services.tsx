@@ -4,9 +4,9 @@ import { cn } from '@/lib/utils';
 
 const Services: React.FC<ClassProps> = ({ className }) => {
   return (
-    <div className={cn('', className)}>
-    
-    </div>
+    <section className={cn('', className)} id="services">
+      services
+    </section>
   );
 };
 
