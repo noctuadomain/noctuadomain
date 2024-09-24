@@ -14,12 +14,10 @@ const Reviews: React.FC<ClassProps> = ({ className }) => {
   const [currReview, setCurrReview] = React.useState<number>(0);
   
   const nextReview = React.useCallback(() => {
-    if (currReview >= reviews.length - 1) return;
     setCurrReview((prev) => prev + 1);
   }, []);
   
   const prevReview = React.useCallback(() => {
-    if (currReview <= 0) return;
     setCurrReview((prev) => prev - 1);
   }, []);
   
