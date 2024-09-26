@@ -9,6 +9,8 @@ import Roadmap from '@/components/elements/roadmap';
 import Reviews from '@/components/elements/reviews';
 import Services from '@/components/elements/services';
 import Projects from '@/components/elements/projects';
+import Contact from '@/components/elements/contact';
+import Footer from '@/components/elements/footer';
 
 const Home: React.FC = () => {
   return (
@@ -22,6 +24,8 @@ const Home: React.FC = () => {
       <Founders />
       <Roadmap />
       <Reviews />
+      <Contact />
+      <Footer />
     </div>
   );
 };
