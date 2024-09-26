@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { ClassProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
@@ -27,7 +28,7 @@ const Footer: React.FC<ClassProps> = ({ className }) => {
               <li
                 className="flex-shrink-0 hover:text-cyan transition-colors hover:duration-300"
                 key={section.name}>
-                <a href={section.href}>{section.name}</a>
+                <Link href={section.href}>{section.name}</Link>
               </li>
             ))}
           </ul>
@@ -39,9 +40,9 @@ const Footer: React.FC<ClassProps> = ({ className }) => {
         </p>
         <div className="flex gap-10">
           {socials.map(social => (
-            <a key={social.name} href={social.href} target="_blank">
+            <Link key={social.name} href={social.href} target="_blank">
               <social.icon className="p-4 size-[30px] box-content" />
-            </a>
+            </Link>
           ))}
         </div>
       </div>

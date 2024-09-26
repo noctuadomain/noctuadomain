@@ -18,7 +18,7 @@ const Header: React.FC<ClassProps> = ({ className }) => {
           <ul className="flex gap-8 text-lg">
             {sections.map(section => (
               <li className="flex-shrink-0 hover:text-cyan transition-colors hover:duration-300" key={section.name}>
-                <a href={section.href}>{section.name}</a>
+                <Link href={section.href}>{section.name}</Link>
               </li>
             ))}
           </ul>

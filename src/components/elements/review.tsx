@@ -14,7 +14,7 @@ const Review: React.FC<ReviewProps> = ({ className, image, name, position, comme
   return (
     <div className={cn('flex-center flex-shrink-0 w-full', className)}>
       <div className="flex-shrink-0 mr-4 rounded-full size-[208px] relative overflow-hidden">
-        <Image className="relative -top-6" src={image} alt="review-1" width={210} height={312} />
+        <Image className="relative -top-6 w-[210px] h-auto" src={image} alt="review-1" width={210} height={0} />
       </div>
       <div className="flex flex-col">
         <strong className="text-2xl font-bold">{name}</strong>

@@ -11,9 +11,10 @@ import { ClassProps } from '@/ts/interfaces';
 import { cn, emailOptions, validate } from '@/lib/utils';
 
 const ContactForm: React.FC<ClassProps> = ({ className }) => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors, isLoading } } = useForm();
   
   const sendFormData = (formData: FieldValues) => {
+    
     console.log(formData);
   };
   
@@ -55,6 +56,7 @@ const ContactForm: React.FC<ClassProps> = ({ className }) => {
           className="border-cyan text-cyan py-4 px-14 mx-auto focus-visible:outline-white"
           variant="outline"
           type="submit"
+          disabled={isLoading}
         >Send Message</Button>
       </div>
     </form>

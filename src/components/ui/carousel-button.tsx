@@ -19,7 +19,7 @@ const CarouselButton: React.FC<CarouselButtonProps> = ({ className, onClick, dir
       onClick={onClick}
       disabled={disabled}
     >
-      <Image className="w-2 h-4" src="/icons/reviews-arrow.svg" alt="reviews arrow" width={8} height={15}/>
+      <Image className="w-2 h-auto" src="/icons/reviews-arrow.svg" alt="reviews arrow" width={8} height={0}/>
     </button>
   );
 };
