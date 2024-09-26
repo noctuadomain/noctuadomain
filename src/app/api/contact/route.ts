@@ -25,16 +25,17 @@ export async function POST(request: NextRequest) {
         `
         <div>
           <div style="display: flex;">
-            <strong style="font-size: 18px; margin-right: 6px;">Name:</strong>
-            <p style="margin: 0; font-size: 16px; line-height: 28px;">${fullName}</p>
+            <p style="margin: 0;"><strong style="font-size: 18px; margin-right: 6px;">Name:</strong></p>
+            <p style="margin: 0; font-size: 16px;">${fullName}</p>
           </div>
           <div style="display: flex;">
-           <strong style="font-size: 18px; margin-right: 6px;">Email:</strong>
-            <p style="margin: 0; font-size: 16px; line-height: 28px;">${email}</p>
+          <p style="margin: 0;"><strong style="font-size: 18px; margin-right: 6px;">Email:</strong></p>
+            <p style="margin: 0; font-size: 16px;">${email}</p>
           </div>
+          <br />
           <div style="display: flex;">
-            <strong style="font-size: 18px; margin-right: 6px;">Message:</strong>
-            <p style="margin: 0; font-size: 16px; line-height: 28px;">${message}</p>
+            <p style="margin: 0;"><strong style="font-size: 18px; margin-right: 6px;">Message:</strong></p>
+            <p style="margin: 0; font-size: 16px;">${message}</p>
           </div>
         </div>
       `
