@@ -50,6 +50,15 @@ const config: Config = {
         'space-grotesk': ['var(--font-space-grotesk)', 'system-ui'],
         'sora': ['var(--font-sora)', 'system-ui'],
         'phosphate': ['var(--font-phosphate)', 'system-ui']
+      },
+      animation: {
+        'button-loading-spinner': 'spin 0.75s ease-in-out infinite'
+      },
+      keyframes: {
+        'button-loading-spinner': {
+          from: { transform: 'rotate(0turn)' },
+          to: { transform: 'rotate(1turn)' }
+        }
       }
     }
   },

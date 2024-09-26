@@ -15,7 +15,8 @@ interface FieldProps extends ClassProps, ComponentProps<'input'> {
   error?: string;
 }
 
-const Field: React.FC<FieldProps> = ({ className, title, name, placeholder, textarea = false, error, register, options }) => {
+const Field: React.FC<FieldProps> = ({
+  className, title, name, placeholder, textarea = false, error, register, options, disabled }) => {
   return (
     <div className={cn('flex flex-col gap-2', className)}>
       <div className="flex items-center">
@@ -23,8 +24,20 @@ const Field: React.FC<FieldProps> = ({ className, title, name, placeholder, text
         {error && <p className="text-red-500 ml-2">- {error}</p>}
       </div>
       {!textarea
-        ? <input {...register(name, options)} className="field-bg p-3 rounded-xl" name={name} placeholder={placeholder} />
-        : <textarea {...register(name, options)} className="field-bg p-3 rounded-xl max-h-56 min-h-36" name={name} placeholder={placeholder} />
+        ? <input
+          {...register(name, options)}
+          className="field-bg p-3 rounded-xl disabled:pointer-events-none disabled:opacity-50"
+          name={name}
+          placeholder={placeholder}
+          disabled={disabled}
+        />
+        : <textarea
+          {...register(name, options)}
+          className="field-bg p-3 rounded-xl max-h-56 min-h-36 disabled:pointer-events-none disabled:opacity-50"
+          name={name}
+          placeholder={placeholder}
+          disabled={disabled}
+        />
       }
     </div>
   );

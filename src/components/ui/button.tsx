@@ -14,7 +14,7 @@ const ghost = 'bg-black';
 
 const ghostChildren = 'underline decoration-transparent underline-offset-4 transition-colors duration-300 group-hover:decoration-white';
 
-const Button: React.FC<ButtonProps> = ({ className, children, variant = 'primary', onClick }) => {
+const Button: React.FC<ButtonProps> = ({ className, children, variant = 'primary', onClick, disabled = false }) => {
   return (
     <button
       className={cn(
@@ -22,6 +22,7 @@ const Button: React.FC<ButtonProps> = ({ className, children, variant = 'primary
         variant === 'primary' ? primary : variant === 'outline' ? outline : ghost,
         className)}
       onClick={onClick}
+      disabled={disabled}
     >
       <div className={cn('flex items-center flex-shrink-0', variant === 'ghost' ? ghostChildren : null)}>{children}</div>
     </button>
