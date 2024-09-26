@@ -5,29 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import socials from '@/data/socials';
-
-const sections = [
-  {
-    name: 'Home',
-    href: '#home'
-  },
-  {
-    name: 'Services',
-    href: '#services'
-  },
-  {
-    name: 'Portfolio',
-    href: '#portfolio'
-  },
-  {
-    name: 'About Us',
-    href: '#about-us'
-  },
-  {
-    name: 'Roadmap',
-    href: '#roadmap'
-  }
-];
+import sections from '@/data/sections';
 
 const Header: React.FC<ClassProps> = ({ className }) => {
   return (

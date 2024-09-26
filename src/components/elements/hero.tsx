@@ -27,7 +27,7 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
               height={24}
             />
           </Button>
-          <a href="#showreel">
+          <a href="#showreel" tabIndex={-1}>
             <Button className="px-10 group" variant="ghost">
               <Image
                 className="mr-6 group-hover:scale-[1.15] group-hover:transition-transform group-hover:duration-300"

@@ -30,7 +30,7 @@ const Founders: React.FC<ClassProps> = ({ className }) => {
             project.
           </p>
         </div>
-        <Image src="/founders.jpg" alt="founders" width={640} height={826} quality={100}/>
+        <Image className="w-[640px] h-[826px]" src="/founders.jpg" alt="founders" width={640} height={826} quality={100}/>
         <div className="max-w-[480px] font-light py-[284px]">
           <p className="text-2xl mb-4">
             <strong className="font-bold">MARIIA:</strong> Co-founder, Manager

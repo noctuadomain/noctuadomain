@@ -37,13 +37,15 @@ button:focus-visible {
 }
 
 .primary-btn-outline:focus-visible {
-  outline-color: grey;
+  outline-color: #3ADCFF;
 }
 
 img {
   user-select: none;
   pointer-events: none;
 }
+
+/* about us text gradient */
 
 .text-gradient {
   -webkit-background-clip: text;
@@ -65,6 +67,8 @@ img {
   @apply text-gradient;
 }
 
+/* form bg gradient */
+
 .review-outer-gradient {
   background: linear-gradient(51deg, rgba(0, 0, 0, 0.16) 0%, rgba(83, 84, 108, 0.16) 100%);
   backdrop-filter: blur(16px);
@@ -74,6 +78,8 @@ img {
   background: linear-gradient(47deg, rgba(51, 51, 62, 0.16) 0%, rgba(83, 84, 108, 0.16) 100%);
   backdrop-filter: blur(16px);
 }
+
+/* btn hover shadow */
 
 .primary-btn-hover:hover {
   box-shadow: 0 4px 20px 0 #fff;
@@ -114,4 +120,49 @@ img {
 
 .flip-animate:hover span {
   transform: rotateX(90deg) translateY(-22px);
+}
+
+/* form */
+
+.field-bg {
+  background: linear-gradient(47deg, rgba(51, 51, 62, 0.16) 0%, rgba(83, 84, 108, 0.16) 100%);
+}
+
+.field-bg::placeholder {
+  color: #676C9E;
+}
+
+.form-bg {
+  background: linear-gradient(51deg, rgba(0, 0, 0, 0.5) 0%, rgba(83, 84, 108, 0.5) 100%);
+  backdrop-filter: blur(6px);
+}
+
+/* icons */
+
+svg path {
+  transition: fill 0.3s;
+}
+
+.instagram:hover {
+  path {
+    fill: #CF4C79
+  }
+}
+.telegram:hover {
+  path {
+    fill: #2AABEE
+  }
+}
+.whatsapp:hover {
+  path {
+    fill: #00D95F
+  }
+}
+.youtube:hover {
+  :first-child {
+    fill: #FF3000
+  }
+  :nth-child(2) {
+    fill: white;
+  }
 }

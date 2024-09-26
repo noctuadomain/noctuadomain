@@ -6,7 +6,7 @@ import Button from '@/components/ui/button';
 
 import { ClassProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
-import Play from '@/components/ui/play';
+import Play from '@/components/ui/icons/play';
 
 const Roadmap: React.FC<ClassProps> = ({ className }) => {
   return (

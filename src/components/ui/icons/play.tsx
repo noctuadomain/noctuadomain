@@ -1,11 +1,9 @@
-import React, { ComponentProps } from 'react';
+import React from 'react';
 
-import { ClassProps } from '@/ts/interfaces';
+import { IconProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
 
-interface PlayProps extends ClassProps, ComponentProps<'svg'> {}
-
-const Play: React.FC<PlayProps> = ({ className, ...props }) => {
+const Play: React.FC<IconProps> = ({ className, ...props }) => {
   return (
     <svg className={cn('', className)} width="11" height="13" viewBox="0 0 11 13" fill="none"
       xmlns="http://www.w3.org/2000/svg" {...props}>
