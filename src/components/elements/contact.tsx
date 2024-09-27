@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 
 const Contact: React.FC<ClassProps> = ({ className }) => {
   return (
-    <>
+    <div id="contact-us">
       <Title
         title="contact us"
         description="we are a full-service studio that creates and develops everything from the initial idea to the final results"
@@ -20,7 +20,7 @@ const Contact: React.FC<ClassProps> = ({ className }) => {
         <Image className="absolute -top-52 -right-12 -z-50" src="/feather-small.png" alt="small feather" width={548} height={686} quality={100} />
         <Image className="absolute top-32 -right-14 -z-50" src="/feathers.png" alt="feathers" width={411} height={571} quality={100} />
       </section>
-    </>
+    </div>
   );
 };
 

@@ -1,8 +1,9 @@
 import React, { ComponentProps } from 'react';
 
+import Image from 'next/image';
+
 import { ClassProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
 
 interface CarouselButtonProps extends ClassProps, ComponentProps<'button'> {
   direction: 'next' | 'prev';

@@ -166,3 +166,9 @@ svg path {
     fill: white;
   }
 }
+
+/* projects */
+
+.projects-ellipse {
+  clip-path: ellipse(53% 50% at 50% 50%);
+}

@@ -17,17 +17,19 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
         <h1 className="text-[155px] font-phosphate leading-[0.85]">ANIMATION STUDIO</h1>
         <p className="font-light text-xl mb-20">All you need to do is trust our extensive experience and enjoy the journey. Share your thoughts with us, and we will start building your story today.</p>
         <div className="flex gap-5">
-          <Button
-            className="px-10 hover:transition-shadow hover:duration-300 group flip-animate">
-            <span data-hover="Get in touch">Contact Us</span>
-            <Image
-              className="ml-6 group-hover:translate-x-3 transition-transform duration-300"
-              src="/icons/arrow-right.svg"
-              alt="arrow-right"
-              width={36}
-              height={24}
-            />
-          </Button>
+          <Link href="#contact-us" tabIndex={-1}>
+            <Button
+              className="px-10 hover:transition-shadow hover:duration-300 group flip-animate">
+              <span data-hover="Get in touch">Contact Us</span>
+              <Image
+                className="ml-6 group-hover:translate-x-3 transition-transform duration-300"
+                src="/icons/arrow-right.svg"
+                alt="arrow-right"
+                width={36}
+                height={24}
+              />
+            </Button>
+          </Link>
           <Link href="#showreel" tabIndex={-1}>
             <Button className="px-10 group" variant="ghost">
               <Image
