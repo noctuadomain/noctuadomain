@@ -6,3 +6,6 @@ export interface ClassProps {
 
 export interface IconProps extends ClassProps, ComponentProps<'svg'> {}
 
+export interface Project {
+  color: string;
+}

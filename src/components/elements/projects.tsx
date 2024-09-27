@@ -1,10 +1,11 @@
 import React from 'react';
 
 import Title from '@/components/elements/title';
+import ProjectsCarousel from '@/components/elements/projects-carousel';
 
 import { ClassProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
-import ProjectsCarousel from '@/components/elements/projects-carousel';
+import projects from '@/data/projects';
 
 const Projects: React.FC<ClassProps> = ({ className }) => {
   return (
@@ -15,8 +16,8 @@ const Projects: React.FC<ClassProps> = ({ className }) => {
         id="portfolio"
       />
       <section className={cn('w-screen my-[134px] overflow-hidden flex flex-col gap-24', className)} id="portfolio">
-        <ProjectsCarousel stopOnHover={true} />
-        <ProjectsCarousel direction="left" />
+        <ProjectsCarousel elements={projects} />
+        <ProjectsCarousel elements={projects} direction="left" />
       </section>
     </>
   );

@@ -9,7 +9,7 @@ interface CarouselOptions {
   direction: 'right' | 'left';
 }
 
-const useInfiniteCarousel = ({ initialDuration, stopOnHover = false, columnGap, direction = 'left' }: CarouselOptions) => {
+const useInfiniteCarousel = ({ initialDuration, stopOnHover = true, columnGap, direction = 'left' }: CarouselOptions) => {
   const [controls, setControls] = React.useState<AnimationPlaybackControls | null>(null);
   const [rerender, setRerender] = React.useState(false);
   
