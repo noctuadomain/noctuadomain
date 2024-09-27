@@ -12,7 +12,7 @@ const Showreel: React.FC<ClassProps> = ({ className }) => {
         muted
         autoPlay
         loop
-        poster="/poster.jpg"
+        poster="/poster.webp"
       />
     </section>
   );

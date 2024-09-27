@@ -40,7 +40,7 @@ const Footer: React.FC<ClassProps> = ({ className }) => {
         </p>
         <div className="flex gap-10">
           {socials.map(social => (
-            <Link key={social.name} href={social.href} target="_blank">
+            <Link key={social.name} href={social.href} target="_blank" aria-label="Connect with us on our social media platforms">
               <social.icon className="p-4 size-[30px] box-content" />
             </Link>
           ))}
