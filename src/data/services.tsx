@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const services = [
   {
     title: '3D Mapping',
@@ -5,29 +7,49 @@ const services = [
     miniDescription: 'Creating detailed 3D models of real-world places.',
     listTitle: 'Use it for',
     list: () => (
-      <ul>
-        <li>Product Launches: Create grand impressions.</li>
-        <li>Advertisements: Capture attention.</li>
-        <li>Festival Announcements: Generate buzz.</li>
-        <li>Holiday Celebrations: Enhance festivities.</li>
+      <ul className="flex flex-wrap gap-10 text-xl service-list">
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Product Launches: Create grand impressions.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Advertisements: Capture attention.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Festival Announcements: Generate buzz.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Holiday Celebrations: Enhance festivities.</li>
       </ul>
     ),
     iconSrc: '/icons/3d-mapping.svg',
     imageSrc: '/services/3d-mapping.png'
   },
   {
-    title: 'Character and Environment Design',
+    title: 'Character & Environment Design',
     description: 'Creating characters and environments is essential for bringing brilliant ideas to life. We design unique heroes and perfect surroundings tailored to your story.\nLet us help you bring your story to life with unique characters and immersive environments.',
     miniDescription: 'Designing cool characters and their amazing worlds.',
     listTitle: 'What We Can Do',
     list: () => (
-      <ul>
-        <li>Nature Elements: Trees, flowers, rocks, etc.</li>
-        <li>Simulations: Realistic water, fire, smoke, etc.</li>
-        <li>Accessories & Weapons: Detailed props.</li>
-        <li>Vehicles: Cars, buses, planes, etc.</li>
-        <li>Characters: Fully textured and rigged.</li>
-        <li>Terrain: Mountains, islands, and more.</li>
+      <ul className="flex flex-wrap gap-10 text-xl service-list">
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Nature Elements: Trees, flowers, rocks, etc.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Simulations: Realistic water, fire, smoke, etc.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Accessories & Weapons: Detailed props.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Vehicles: Cars, buses, planes, etc.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Characters: Fully textured and rigged.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Terrain: Mountains, islands, and more.</li>
       </ul>
     ),
     iconSrc: '/icons/character-and-environment-design.svg',
@@ -43,6 +65,15 @@ const services = [
     imageSrc: '/services/3d-and-2d-animations.png'
   },
   {
+    title: 'Visual Effects',
+    description: 'VFX enhance your videos by adding or manipulating content, characters, actions, or environments. Commonly used in films, TV shows, commercials, and more, VFX elevate visual storytelling.\nLet our expert VFX services bring your vision to life with stunning and immersive visuals.',
+    miniDescription: 'Adding special effects that make videos look magical.',
+    listTitle: '',
+    list: () => null,
+    iconSrc: '/icons/visual-effects.svg',
+    imageSrc: '/services/visual-effects.png'
+  },
+  {
     title: 'Motion Graphics',
     description: 'Motion graphics are essential for ads, explainer videos, educational content, blogs, social media, and TV show openings. They powerfully propel your brand forward by increasing engagement and conversions.\nHarness the power of motion graphics to captivate your audience and drive your brand\'s success.',
     miniDescription: 'Creating moving graphics to make videos more exciting.',
@@ -52,17 +83,27 @@ const services = [
     imageSrc: '/services/motion-graphics.png'
   },
   {
-    title: 'Video Shooting/Production',
+    title: 'Video Shooting / Production',
     description: 'Looking for top-notch video production? Share your vision, and we\'ll handle the rest. We offer comprehensive services from concept and script development to professional shooting and expert editing.\nLet us bring your ideas to life with expert video production.',
     miniDescription: 'Filming and editing videos to tell stories.',
     listTitle: 'We specialize in',
     list: () => (
-      <ul>
-        <li>Corporate Videos: Showcase your business.</li>
-        <li>Commercial Marketing: Engaging promotions.</li>
-        <li>Digital Videos: High-quality content.</li>
-        <li>Trailers: Compelling previews.</li>
-        <li>Social Media Videos: Captivate your audience.</li>
+      <ul className="flex flex-wrap gap-10 text-xl service-list">
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Corporate Videos: Showcase your business.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Commercial Marketing: Engaging promotions.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Digital Videos: High-quality content.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Trailers: Compelling previews.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Social Media Videos: Captivate your audience.</li>
       </ul>
     ),
     iconSrc: '/icons/video-shooting-production.svg',
@@ -74,12 +115,22 @@ const services = [
     miniDescription: 'Building fun and interactive virtual reality or augmented reality experiences.',
     listTitle: 'Use AR/VR for',
     list: () => (
-      <ul>
-        <li>Advertisements: Create interactive ads.</li>
-        <li>Exhibitions: Offer virtual tours.</li>
-        <li>Education: Enhance learning experiences.</li>
-        <li>Events: Provide memorable interactions.</li>
-        <li>Performances: Add new dimensions to shows.</li>
+      <ul className="flex flex-wrap gap-10 text-xl service-list">
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Advertisements: Create interactive ads.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Exhibitions: Offer virtual tours.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Education: Enhance learning experiences.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Events: Provide memorable interactions.</li>
+        <li className="flex-center">
+          <Image className="mr-3" src="/icons/checkmark.svg" alt="checkmark" width={30} height={30} />
+          Performances: Add new dimensions to shows.</li>
       </ul>
     ),
     iconSrc: '/icons/ar-vr.svg',

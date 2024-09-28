@@ -44,7 +44,7 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
           </Link>
         </div>
       </div>
-      <Image src="/owl_halfmoon.png" alt="owl-halfmoon" width={900} height={900}/>
+      <Image src="/owl_halfmoon.png" alt="owl-halfmoon" width={900} height={900} priority={true} />
     </section>
   );
 };

@@ -172,3 +172,41 @@ svg path {
 .projects-ellipse {
   clip-path: ellipse(53% 50% at 50% 50%);
 }
+
+/* services */
+
+.service-card-shadow:after {
+  position: absolute;
+  top:0; right:0; bottom:0; left:0;
+  content: '';
+
+  -moz-box-shadow: inset 0px -200px 120px 20px rgba(0,0,0,0.6);
+  -webkit-box-shadow: inset 0px -200px 120px 20px rgba(0,0,0,0.6);
+  box-shadow: inset 0px -200px 120px 20px rgba(0,0,0,0.6);
+}
+
+.service-list {
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+@property --myColor1 {
+  syntax: '<color>';
+  initial-value: #070B10;
+  inherits: false;
+}
+
+@property --myColor2 {
+  syntax: '<color>';
+  initial-value: #070B10;
+  inherits: false;
+}
+
+.service-mini-card-bg {
+  transition: --myColor1 0.3s, --myColor2 0.3s;
+  background: linear-gradient(175deg, var(--myColor1) 0%, var(--myColor2) 100%);
+  --myColor1: #1b1c3629;
+  --myColor2: #70717a29;
+}

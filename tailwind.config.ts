@@ -59,6 +59,11 @@ const config: Config = {
           from: { transform: 'rotate(0turn)' },
           to: { transform: 'rotate(1turn)' }
         }
+      },
+      flex: {
+        '1.5': '1.5',
+        '2': '2',
+        '8': '8'
       }
     }
   },
