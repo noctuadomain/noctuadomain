@@ -14,8 +14,9 @@ const Roadmap: React.FC<ClassProps> = ({ className }) => {
       <Title
         title="roadmap"
         description="full support from concept to final video delivery"
+        id="roadmap"
       />
-      <section className={cn('container my-44', className)} id="roadmap">
+      <section className={cn('container my-44', className)}>
         <Image className="mb-14" src="/roadmap.png" alt="roadmap" width={1820} height={1413} quality={100} />
         <div className="max-w-[1100px] flex-center flex-col gap-14 mx-auto">
           <p className="text-xl text-center">Take a journey through our creative process and
