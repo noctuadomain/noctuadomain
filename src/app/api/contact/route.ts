@@ -3,11 +3,11 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   const formData = await request.formData();
-  
+
   const fullName = formData.get('fullName');
   const email = formData.get('email');
   const message = formData.get('message');
-  
+
   const transporter = nodemailer.createTransport({
     service: process.env.SMTP_SERVICE,
     auth: {
@@ -21,8 +21,7 @@ export async function POST(request: NextRequest) {
       to: process.env.SMTP_USER,
       subject: `Incoming message from ${fullName} (${email})`,
       text: '',
-      html:
-        `
+      html: `
         <div>
           <div style="display: flex;">
             <p style="margin: 0;"><strong style="font-size: 18px; margin-right: 6px;">Name:</strong></p>
@@ -40,12 +39,14 @@ export async function POST(request: NextRequest) {
         </div>
       `
     });
-    
-    return NextResponse.json({ message: 'Email was successfully sent' });
+
+    return NextResponse.json(
+      { message: 'Message was successfully sent' },
+      { status: 200 }
+    );
   } catch (error) {
     console.error(error);
-    
-    NextResponse.json({ message: 'COULD NOT SEND MESSAGE' }, { status: 500 });
+
+    NextResponse.json({ message: 'Could not sent message' }, { status: 500 });
   }
-  
 }

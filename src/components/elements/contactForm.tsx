@@ -13,9 +13,14 @@ import { ClassProps } from '@/ts/interfaces';
 import { cn, emailOptions, validate } from '@/lib/utils';
 
 const ContactForm: React.FC<ClassProps> = ({ className }) => {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({ mode: 'onChange' });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm({ mode: 'onChange' });
   const [isLoading, setIsLoading] = React.useState(false);
-  
+
   const sendFormData = async (formData: FieldValues) => {
     setIsLoading(true);
     try {
@@ -30,35 +35,39 @@ const ContactForm: React.FC<ClassProps> = ({ className }) => {
         method: 'post',
         body: formDataToSend
       });
-      
+
       if (!response.ok) {
         throw new Error(`response status: ${response.status}`);
       }
-      
+
       toast.success('The message was successfully sent', { duration: 3000 });
       reset();
     } catch (error) {
       console.error(error);
-      
+
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       toast.error(`Error ${errorMessage}, please try resubmitting the form`);
     } finally {
       setIsLoading(false);
     }
   };
-  
+
   return (
     <>
-      <Toaster toastOptions={{
-        style: {
-          backgroundColor: '#070B10',
-          color: '#F9F8F8',
-          border: '1px solid #212530'
-        }
-      }} />
-      <form className={cn('p-16 rounded-2xl form-bg', className)}
-        onSubmit={handleSubmit(sendFormData)}>
-        <div className="flex gap-4 mb-10">
+      <Toaster
+        toastOptions={{
+          style: {
+            backgroundColor: '#070B10',
+            color: '#F9F8F8',
+            border: '1px solid #212530'
+          }
+        }}
+      />
+      <form
+        className={cn('form-bg rounded-2xl p-16', className)}
+        onSubmit={handleSubmit(sendFormData)}
+      >
+        <div className="mb-10 flex gap-4">
           <Field
             className="w-1/2"
             title="Full Name"
@@ -94,12 +103,13 @@ const ContactForm: React.FC<ClassProps> = ({ className }) => {
         />
         <div className="flex">
           <Button
-            className="border-cyan text-cyan py-4 px-14 mx-auto focus-visible:outline-white"
+            className="mx-auto border-cyan px-14 py-4 text-cyan focus-visible:outline-white"
             variant="outline"
             type="submit"
             disabled={isLoading}
-          >{isLoading ? <Loading className="mr-3"/> : null} Send
-            Message</Button>
+          >
+            {isLoading ? <Loading className="mr-3" /> : null} Send Message
+          </Button>
         </div>
       </form>
     </>

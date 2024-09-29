@@ -9,22 +9,38 @@ interface ButtonProps extends ClassProps, ComponentProps<'button'> {
 }
 
 const primary = 'bg-white text-black primary-btn-hover primary-btn-outline';
-const outline = 'border border-white bg-transparent hover:text-cyan hover:border-cyan hover:transition-all hover:duration-300 outline-btn-hover';
+const outline =
+  'border border-white bg-transparent hover:text-cyan hover:border-cyan hover:transition-all hover:duration-300 outline-btn-hover';
 const ghost = 'bg-black';
 
-const ghostChildren = 'underline decoration-transparent underline-offset-4 transition-colors duration-300 group-hover:decoration-white';
+const ghostChildren =
+  'underline decoration-transparent underline-offset-4 transition-colors duration-300 group-hover:decoration-white';
 
-const Button: React.FC<ButtonProps> = ({ className, children, variant = 'primary', onClick, disabled = false }) => {
+const Button: React.FC<ButtonProps> = ({
+  className,
+  children,
+  variant = 'primary',
+  onClick,
+  disabled = false
+}) => {
   return (
     <button
       className={cn(
-        'text-xl font-medium p-4 rounded-lg active:translate-y-[1px] active:scale-[0.99] active:transition-transform disabled:pointer-events-none disabled:opacity-50 group',
+        'group rounded-lg p-4 text-xl font-medium active:translate-y-[1px] active:scale-[0.99] active:transition-transform disabled:pointer-events-none disabled:opacity-50',
         variant === 'primary' ? primary : variant === 'outline' ? outline : ghost,
-        className)}
+        className
+      )}
       onClick={onClick}
       disabled={disabled}
     >
-      <div className={cn('flex items-center flex-shrink-0', variant === 'ghost' ? ghostChildren : null)}>{children}</div>
+      <div
+        className={cn(
+          'flex flex-shrink-0 items-center',
+          variant === 'ghost' ? ghostChildren : null
+        )}
+      >
+        {children}
+      </div>
     </button>
   );
 };

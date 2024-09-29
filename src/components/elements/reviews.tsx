@@ -11,36 +11,44 @@ import Image from 'next/image';
 
 const Reviews: React.FC<ClassProps> = ({ className }) => {
   const [currReview, setCurrReview] = React.useState<number>(0);
-  
+
   const nextReview = React.useCallback(() => {
     setCurrReview((prev) => prev + 1);
   }, []);
-  
+
   const prevReview = React.useCallback(() => {
     setCurrReview((prev) => prev - 1);
   }, []);
-  
+
   return (
     <>
       <Title title="reviews" description="smooth projects management and delivery" />
       <section className={cn('container my-32', className)}>
-        <div className="review-outer-gradient max-w-[1320px] relative mx-auto border border-solid border-[#161A2F] rounded-[20px] p-10">
-          <div className="flex flex-col review-inner-gradient w-full max-w-[1240px] p-6 rounded-[20px] border border-solid border-[#26293C] overflow-hidden">
+        <div className="review-outer-gradient relative mx-auto max-w-[1320px] rounded-[20px] border border-solid border-[#161A2F] p-10">
+          <div className="review-inner-gradient flex w-full max-w-[1240px] flex-col overflow-hidden rounded-[20px] border border-solid border-[#26293C] p-6">
             <div
               className="flex w-full gap-7 transition-transform duration-500"
-              style={{ transform: `translateX(calc(${(-100) * currReview}% - ${currReview * 1.75}rem))` }}
+              style={{
+                transform: `translateX(calc(${-100 * currReview}% - ${currReview * 1.75}rem))`
+              }}
             >
               {reviews.map(({ image, name, position, comment }) => (
-                <Review key={name} image={image} name={name} position={position} comment={comment} />
+                <Review
+                  key={name}
+                  image={image}
+                  name={name}
+                  position={position}
+                  comment={comment}
+                />
               ))}
             </div>
-            <div className="flex mt-10">
+            <div className="mt-10 flex">
               <div className="mx-auto flex items-center gap-6">
                 {reviews.map((_, index) => (
                   <Image
                     key={index}
                     className={cn(
-                      'box-content p-2 border border-solid border-transparent rounded-full transition-colors duration-300',
+                      'box-content rounded-full border border-solid border-transparent p-2 transition-colors duration-300',
                       currReview === index ? 'border-cyan' : null
                     )}
                     src="/icons/dot.svg"
@@ -53,13 +61,13 @@ const Reviews: React.FC<ClassProps> = ({ className }) => {
             </div>
           </div>
           <CarouselButton
-            className="size-[44px] -left-5 top-1/2 -translate-y-1/2"
+            className="-left-5 top-1/2 size-[44px] -translate-y-1/2"
             direction="prev"
             onClick={prevReview}
             disabled={currReview <= 0}
           />
           <CarouselButton
-            className="size-[44px] -right-5 top-1/2 -translate-y-1/2"
+            className="-right-5 top-1/2 size-[44px] -translate-y-1/2"
             direction="next"
             onClick={nextReview}
             disabled={currReview >= reviews.length - 1}

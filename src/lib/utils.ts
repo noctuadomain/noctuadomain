@@ -5,7 +5,11 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const validate = (minLengthValue: number, maxLengthValue: number, required: boolean = true) => {
+export const validate = (
+  minLengthValue: number,
+  maxLengthValue: number,
+  required: boolean = true
+) => {
   return {
     required: required ? 'required' : false,
     maxLength: {

@@ -12,7 +12,11 @@
   }
 }
 
-input, textarea, select, button, option {
+input,
+textarea,
+select,
+button,
+option {
   font-family: var(--font-space-grotesk), 'system-ui';
 }
 
@@ -37,7 +41,7 @@ button:focus-visible {
 }
 
 .primary-btn-outline:focus-visible {
-  outline-color: #3ADCFF;
+  outline-color: #3adcff;
 }
 
 img {
@@ -53,29 +57,37 @@ img {
 }
 
 .text-gradient-orange {
-  background: linear-gradient(to right, #E1A23A 0%, #F6681E 100%);
+  background: linear-gradient(to right, #e1a23a 0%, #f6681e 100%);
   @apply text-gradient;
 }
 
 .text-gradient-red-to-blue {
-  background: linear-gradient(to right, #95413B 0%, #371C58 50%, #0A55CD 100%);
+  background: linear-gradient(to right, #95413b 0%, #371c58 50%, #0a55cd 100%);
   @apply text-gradient;
 }
 
 .text-gradient-blue {
-  background: linear-gradient(to right, #263284 0%, #0A55CD 100%);
+  background: linear-gradient(to right, #263284 0%, #0a55cd 100%);
   @apply text-gradient;
 }
 
 /* form bg gradient */
 
 .review-outer-gradient {
-  background: linear-gradient(51deg, rgba(0, 0, 0, 0.16) 0%, rgba(83, 84, 108, 0.16) 100%);
+  background: linear-gradient(
+    51deg,
+    rgba(0, 0, 0, 0.16) 0%,
+    rgba(83, 84, 108, 0.16) 100%
+  );
   backdrop-filter: blur(16px);
 }
 
 .review-inner-gradient {
-  background: linear-gradient(47deg, rgba(51, 51, 62, 0.16) 0%, rgba(83, 84, 108, 0.16) 100%);
+  background: linear-gradient(
+    47deg,
+    rgba(51, 51, 62, 0.16) 0%,
+    rgba(83, 84, 108, 0.16) 100%
+  );
   backdrop-filter: blur(16px);
 }
 
@@ -86,7 +98,7 @@ img {
 }
 
 .outline-btn-hover:hover {
-  box-shadow: 0 2px 20px 0 #3ADCFF95;
+  box-shadow: 0 2px 20px 0 #3adcff95;
 }
 
 /* btn flip animation */
@@ -125,15 +137,23 @@ img {
 /* form */
 
 .field-bg {
-  background: linear-gradient(47deg, rgba(51, 51, 62, 0.16) 0%, rgba(83, 84, 108, 0.16) 100%);
+  background: linear-gradient(
+    47deg,
+    rgba(51, 51, 62, 0.16) 0%,
+    rgba(83, 84, 108, 0.16) 100%
+  );
 }
 
 .field-bg::placeholder {
-  color: #676C9E;
+  color: #676c9e;
 }
 
 .form-bg {
-  background: linear-gradient(51deg, rgba(0, 0, 0, 0.5) 0%, rgba(83, 84, 108, 0.5) 100%);
+  background: linear-gradient(
+    51deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(83, 84, 108, 0.5) 100%
+  );
   backdrop-filter: blur(6px);
 }
 
@@ -145,22 +165,22 @@ svg path {
 
 .instagram:hover {
   path {
-    fill: #CF4C79
+    fill: #cf4c79;
   }
 }
 .telegram:hover {
   path {
-    fill: #2AABEE
+    fill: #2aabee;
   }
 }
 .whatsapp:hover {
   path {
-    fill: #00D95F
+    fill: #00d95f;
   }
 }
 .youtube:hover {
   :first-child {
-    fill: #FF3000
+    fill: #ff3000;
   }
   :nth-child(2) {
     fill: white;
@@ -177,12 +197,15 @@ svg path {
 
 .service-card-shadow:after {
   position: absolute;
-  top:0; right:0; bottom:0; left:0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   content: '';
 
-  -moz-box-shadow: inset 0px -200px 120px 20px rgba(0,0,0,0.6);
-  -webkit-box-shadow: inset 0px -200px 120px 20px rgba(0,0,0,0.6);
-  box-shadow: inset 0px -200px 120px 20px rgba(0,0,0,0.6);
+  -moz-box-shadow: inset 0px -200px 120px 20px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: inset 0px -200px 120px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0px -200px 120px 20px rgba(0, 0, 0, 0.6);
 }
 
 .service-list {
@@ -194,18 +217,20 @@ svg path {
 
 @property --myColor1 {
   syntax: '<color>';
-  initial-value: #070B10;
+  initial-value: #070b10;
   inherits: false;
 }
 
 @property --myColor2 {
   syntax: '<color>';
-  initial-value: #070B10;
+  initial-value: #070b10;
   inherits: false;
 }
 
 .service-mini-card-bg {
-  transition: --myColor1 0.3s, --myColor2 0.3s;
+  transition:
+    --myColor1 0.3s,
+    --myColor2 0.3s;
   background: linear-gradient(175deg, var(--myColor1) 0%, var(--myColor2) 100%);
   --myColor1: #1b1c3629;
   --myColor2: #70717a29;

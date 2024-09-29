@@ -10,19 +10,21 @@ import { cn } from '@/lib/utils';
 
 const Hero: React.FC<ClassProps> = ({ className }) => {
   return (
-    <section className={cn('container flex-space-between relative', className)}>
-      <Glow className="h-[500px] w-[320px] -bottom-[400px] right-20" />
-      <Glow className="h-[750px] w-[550px] -top-20 left-20 rotate-45 opacity-60" />
-      <div className="flex flex-col max-w-[790px]">
-        <h1 className="text-[155px] font-phosphate leading-[0.85]">ANIMATION STUDIO</h1>
-        <p className="font-light text-xl mb-20">All you need to do is trust our extensive experience and enjoy the journey. Share your thoughts with us, and we will start building your story today.</p>
+    <section className={cn('container relative flex-space-between', className)}>
+      <Glow className="-bottom-[400px] right-20 h-[500px] w-[320px]" />
+      <Glow className="-top-20 left-20 h-[750px] w-[550px] rotate-45 opacity-75" />
+      <div className="flex max-w-[790px] flex-col">
+        <h1 className="font-phosphate text-[155px] leading-[0.85]">ANIMATION STUDIO</h1>
+        <p className="mb-20 text-xl font-light">
+          All you need to do is trust our extensive experience and enjoy the journey. Share your
+          thoughts with us, and we will start building your story today.
+        </p>
         <div className="flex gap-5">
           <Link href="#contact-us" tabIndex={-1}>
-            <Button
-              className="px-10 hover:transition-shadow hover:duration-300 group flip-animate">
+            <Button className="flip-animate group px-10 hover:transition-shadow hover:duration-300">
               <span data-hover="Get in touch">Contact Us</span>
               <Image
-                className="ml-6 group-hover:translate-x-3 transition-transform duration-300"
+                className="ml-6 transition-transform duration-300 group-hover:translate-x-3"
                 src="/icons/arrow-right.svg"
                 alt="arrow-right"
                 width={36}
@@ -31,7 +33,7 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
             </Button>
           </Link>
           <Link href="#showreel" tabIndex={-1}>
-            <Button className="px-10 group" variant="ghost">
+            <Button className="group px-10" variant="ghost">
               <Image
                 className="mr-6 group-hover:scale-[1.15] group-hover:transition-transform group-hover:duration-300"
                 src="/icons/play-in-circle.svg"

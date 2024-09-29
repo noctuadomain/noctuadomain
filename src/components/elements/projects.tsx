@@ -15,7 +15,10 @@ const Projects: React.FC<ClassProps> = ({ className }) => {
         description="talented team of 2d and 3d professionals"
         id="portfolio"
       />
-      <section className={cn('w-screen my-[134px] overflow-hidden flex flex-col gap-24', className)} id="portfolio">
+      <section
+        className={cn('my-[134px] flex w-screen flex-col gap-24 overflow-hidden', className)}
+        id="portfolio"
+      >
         <ProjectsCarousel elements={projects} />
         <ProjectsCarousel elements={projects} direction="left" />
       </section>

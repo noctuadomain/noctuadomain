@@ -5,8 +5,8 @@ import { cn } from '@/lib/utils';
 
 const Loading: React.FC<ClassProps> = ({ className }) => {
   return (
-    <div className={cn('size-7 relative', className)}>
-      <div className="animate-button-loading-spinner absolute content-none top-0 left-0 right-0 bottom-0 m-auto border-4 border-solid border-transparent border-l-inherit rounded-full" />
+    <div className={cn('relative size-7', className)}>
+      <div className="absolute bottom-0 left-0 right-0 top-0 m-auto animate-button-loading-spinner rounded-full border-4 border-solid border-transparent border-l-inherit content-none" />
     </div>
   );
 };

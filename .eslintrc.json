@@ -1,5 +1,5 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"],
+  "extends": ["next/core-web-vitals", "next/typescript", "prettier"],
   "rules": {
     "no-var": "error",
     "semi": "error",
@@ -8,23 +8,20 @@
     "no-multiple-empty-lines": ["error", { "max": 1 }],
     "prefer-const": "error",
     "no-use-before-define": "error",
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "indent": [
-      "error",
-      2
-    ],
+    "quotes": ["error", "single"],
+    "indent": ["error", 2],
     "react/jsx-one-expression-per-line": "off",
     "linebreak-style": ["off", "windows"],
-    "comma-dangle": ["error", {
-      "imports": "never"
-    }],
+    "comma-dangle": [
+      "error",
+      {
+        "imports": "never"
+      }
+    ],
     "react/jsx-props-no-spreading": "warn",
     "import/no-named-as-default": "warn",
     "import/no-named-as-default-member": "warn",
-    "import/prefer-default-export": "warn",
+    "import/prefer-default-export": "off",
     "camelcase": "warn",
     "react/no-array-index-key": "warn",
     "eqeqeq": "warn",

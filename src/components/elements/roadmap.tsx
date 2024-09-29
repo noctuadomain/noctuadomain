@@ -17,14 +17,21 @@ const Roadmap: React.FC<ClassProps> = ({ className }) => {
         id="roadmap"
       />
       <section className={cn('container my-44', className)}>
-        <Image className="mb-14" src="/roadmap.png" alt="roadmap" width={1820} height={1413} quality={100} />
-        <div className="max-w-[1100px] flex-center flex-col gap-14 mx-auto">
-          <p className="text-xl text-center">Take a journey through our creative process and
-            see how we transform simple ideas into incredible animations. Watch
-            the fun video, complete with cool visuals and sounds, that shows
-            every exciting step we take!
+        <Image
+          className="mb-14"
+          src="/roadmap.png"
+          alt="roadmap"
+          width={1820}
+          height={1413}
+          quality={100}
+        />
+        <div className="mx-auto max-w-[1100px] flex-col gap-14 flex-center">
+          <p className="text-center text-xl">
+            Take a journey through our creative process and see how we transform simple ideas into
+            incredible animations. Watch the fun video, complete with cool visuals and sounds, that
+            shows every exciting step we take!
           </p>
-          <Button className="px-7 group/button" variant="outline">
+          <Button className="group/button px-7" variant="outline">
             <Play className="mr-3" />
             Watch a demo
           </Button>

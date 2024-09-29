@@ -12,13 +12,19 @@ interface ReviewProps extends ClassProps {
 
 const Review: React.FC<ReviewProps> = ({ className, image, name, position, comment }) => {
   return (
-    <div className={cn('flex-center flex-shrink-0 w-full', className)}>
-      <div className="flex-shrink-0 mr-4 rounded-full size-[208px] relative overflow-hidden">
-        <Image className="relative -top-6 w-[210px] h-auto" src={image} alt="review-1" width={210} height={0} />
+    <div className={cn('w-full flex-shrink-0 flex-center', className)}>
+      <div className="relative mr-4 size-[208px] flex-shrink-0 overflow-hidden rounded-full">
+        <Image
+          className="relative -top-6 h-auto w-[210px]"
+          src={image}
+          alt="review-1"
+          width={210}
+          height={0}
+        />
       </div>
       <div className="flex flex-col">
         <strong className="text-2xl font-bold">{name}</strong>
-        <p className="text-xl opacity-50 mb-5">{position}</p>
+        <p className="mb-5 text-xl opacity-50">{position}</p>
         <p className="text-xl">{comment}</p>
       </div>
     </div>

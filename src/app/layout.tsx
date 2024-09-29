@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.variable} ${phosphate.variable} ${sora.variable} min-h-screen bg-black relative text-white`}
+        className={`${spaceGrotesk.variable} ${phosphate.variable} ${sora.variable} relative min-h-screen bg-black text-white`}
       >
         {children}
       </body>
