@@ -167,7 +167,7 @@ export const services: Services[] = [
     id: 4,
     title: 'Motion Graphics',
     description:
-      "Motion graphics are essential for ads, explainer videos, educational content, blogs, social media, and TV show openings. They powerfully propel your brand forward by increasing engagement and conversions.\nHarness the power of motion graphics to captivate your audience and drive your brand's success.",
+      'Motion graphics are essential for ads, explainer videos, educational content, blogs, social media, and TV show openings. They powerfully propel your brand forward by increasing engagement and conversions.\nHarness the power of motion graphics to captivate your audience and drive your brand\'s success.',
     miniDescription: 'Creating moving graphics to make videos more exciting.',
     listTitle: '',
     list: () => null,
@@ -178,7 +178,7 @@ export const services: Services[] = [
     id: 5,
     title: 'Video Shooting / Production',
     description:
-      "Looking for top-notch video production? Share your vision, and we'll handle the rest. We offer comprehensive services from concept and script development to professional shooting and expert editing.\nLet us bring your ideas to life with expert video production.",
+      'Looking for top-notch video production? Share your vision, and we\'ll handle the rest. We offer comprehensive services from concept and script development to professional shooting and expert editing.\nLet us bring your ideas to life with expert video production.',
     miniDescription: 'Filming and editing videos to tell stories.',
     listTitle: 'We specialize in',
     list: () => (
