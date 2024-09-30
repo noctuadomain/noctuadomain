@@ -1,18 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-export interface Services {
-  id: number;
-  title: string;
-  description: string;
-  miniDescription: string;
-  listTitle?: string;
-  list: () => React.ReactNode;
-  iconSrc: string;
-  imageSrc: string;
-}
+import { type Service } from '@/ts/interfaces';
 
-export const services: Services[] = [
+export const services: Service[] = [
   {
     id: 0,
     title: '3D Mapping',

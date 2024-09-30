@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ContactForm from '@/components/elements/contactForm';
+import ContactForm from '@/components/elements/contact-form';
 import Title from '@/components/elements/title';
 import Image from 'next/image';
 

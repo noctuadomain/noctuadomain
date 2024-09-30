@@ -5,7 +5,8 @@ import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import Title from '@/components/elements/title';
-import Image from 'next/image';
+import ServiceCard from './service-card';
+import ServiceMiniCard from './service-mini-card';
 
 import { ClassProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
@@ -14,10 +15,9 @@ import { services } from '@/data/services';
 const Services: React.FC<ClassProps> = ({ className }) => {
   const [activeService, setActiveService] = React.useState<number>(0);
 
-  const changeService = (index: number) => {
+  const changeService = React.useCallback((index: number) => {
     setActiveService(index);
-  };
-
+  }, []);
   return (
     <>
       <Title
@@ -28,40 +28,17 @@ const Services: React.FC<ClassProps> = ({ className }) => {
       <section className={cn('mb-44', className)} id="services">
         <div className="mb-20 flex w-full">
           {services.map((service, index) => (
-            <div
-              className={cn(
-                'relative h-[560px] overflow-hidden transition-all duration-500',
-                activeService !== index
-                  ? 'flex-1 cursor-pointer grayscale hover:flex-1.5'
-                  : 'service-card-shadow flex-8 grayscale-0',
-                activeService + 1 === index
+            <ServiceCard
+              className={
+                activeService === index + 1 || activeService === index - 1
                   ? 'opacity-60 grayscale-0'
-                  : activeService !== index
-                    ? 'opacity-70'
-                    : 'opacity-100' // next card - all other cards - activeCard
-              )}
+                  : ''
+              }
+              isActive={activeService === index}
+              service={service}
+              changeService={changeService}
               key={service.title}
-              onClick={() => changeService(index)}
-            >
-              <Image
-                className="absolute left-0 top-0 h-full w-full object-cover"
-                src={service.imageSrc}
-                alt={service.title}
-                width={1100}
-                height={560}
-              />
-              {activeService === index && (
-                <motion.div
-                  className="absolute bottom-5 left-5 right-5 z-10 flex flex-col"
-                  initial={{ opacity: 0, x: -100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4, duration: 0.3 }}
-                >
-                  <h3 className="mb-5 text-[40px] font-bold">{service.title}</h3>
-                  <p>{service.description}</p>
-                </motion.div>
-              )}
-            </div>
+            />
           ))}
         </div>
         <AnimatePresence>
@@ -82,33 +59,12 @@ const Services: React.FC<ClassProps> = ({ className }) => {
         </AnimatePresence>
         <div className="container grid auto-rows-min grid-cols-4 gap-14">
           {services.map((service, index) => (
-            <div
-              className={cn(
-                'rounded-2xl p-5',
-                activeService === index ? 'service-mini-card-bg' : 'cursor-pointer bg-transparent'
-              )}
+            <ServiceMiniCard
+              isActive={activeService === index}
+              service={service}
+              changeService={changeService}
               key={service.title}
-              onClick={() => changeService(index)}
-            >
-              <div
-                className={cn(
-                  'mb-10 inline-flex rounded-3xl bg-[#3ADCFF1A] p-4 transition-colors duration-300',
-                  activeService !== index ? 'bg-[#FFFFFF12]' : ''
-                )}
-              >
-                <Image
-                  className="size-16"
-                  src={service.iconSrc}
-                  alt={`${service.title}-icon`}
-                  width={64}
-                  height={64}
-                />
-              </div>
-              <div className="relative bottom-0">
-                <h4 className="mb-4 text-[30px]">{service.title}</h4>
-                <p className="text-xl opacity-50">{service.miniDescription}</p>
-              </div>
-            </div>
+            />
           ))}
         </div>
       </section>

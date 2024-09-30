@@ -18,7 +18,7 @@ export async function GET() {
     const res = await client.query('SELECT * FROM projects ORDER BY id');
     const projects = res.rows as Project[];
 
-    return NextResponse.json(projects);
+    return NextResponse.json(projects, { status: 200 });
   } catch (error) {
     console.error('Request execution error:', error);
 
