@@ -30,3 +30,23 @@ export const emailOptions = {
     message: 'invalid email format'
   }
 };
+
+export function getVideoId(url: string): string {
+  let ID = '';
+  const urlParts = url.replace(/(>|<)/gi, '').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+
+  if (urlParts[2] !== undefined) {
+    const idParts = urlParts[2].split(/[^0-9a-z_\-]/i);
+    ID = idParts[0];
+  } else {
+    ID = urlParts[0];
+  }
+  return ID;
+}
+
+export function getPreviewSrc(url: string) {
+  const videoId = getVideoId(url);
+  const videoPreviewSrc = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
+  return videoPreviewSrc;
+}

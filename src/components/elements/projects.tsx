@@ -1,13 +1,27 @@
+'use client';
+
 import React from 'react';
 
 import Title from '@/components/elements/title';
 import ProjectsCarousel from '@/components/elements/projects-carousel';
 
-import { ClassProps } from '@/ts/interfaces';
+import { ClassProps, Project } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
-import projects from '@/data/projects';
 
 const Projects: React.FC<ClassProps> = ({ className }) => {
+  const [projects, setProjects] = React.useState<Project[]>([]);
+
+  React.useEffect(() => {
+    const fetchProjects = async () => {
+      const res = await fetch('/api/projects');
+      const projects = (await res.json()) as Project[];
+
+      setProjects(projects);
+    };
+
+    fetchProjects();
+  }, []);
+
   return (
     <>
       <Title
@@ -20,7 +34,11 @@ const Projects: React.FC<ClassProps> = ({ className }) => {
         id="portfolio"
       >
         <ProjectsCarousel elements={projects} />
-        <ProjectsCarousel elements={projects} direction="left" />
+        <ProjectsCarousel
+          elements={[...projects].sort((a, b) => b.id - a.id)}
+          direction="left"
+          stopOnHover={false}
+        />
       </section>
     </>
   );
