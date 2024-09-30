@@ -9,20 +9,13 @@ import Image from 'next/image';
 
 import { ClassProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
-import { services, type Services } from '@/data/services';
+import { services } from '@/data/services';
 
 const Services: React.FC<ClassProps> = ({ className }) => {
-  const [servicesOrder, setServicesOrder] = React.useState<Services[]>(services);
   const [activeService, setActiveService] = React.useState<number>(0);
 
-  const changeService = () => {
-    if (index === activeService) return;
-
-    const elemsLeftToIdx = services.slice(0, index);
-    const elemsRightToIdx = services.slice(index + 1);
-    const newOrder = [services[index], ...elemsRightToIdx, ...elemsLeftToIdx];
+  const changeService = (index: number) => {
     setActiveService(index);
-    setServicesOrder(newOrder);
   };
 
   return (
@@ -34,14 +27,18 @@ const Services: React.FC<ClassProps> = ({ className }) => {
       />
       <section className={cn('mb-44', className)} id="services">
         <div className="mb-20 flex w-full">
-          {servicesOrder.map((service, index) => (
+          {services.map((service, index) => (
             <div
               className={cn(
                 'relative h-[560px] overflow-hidden transition-all duration-500',
-                0 !== index
-                  ? 'flex-1 cursor-pointer grayscale hover:flex-2'
+                activeService !== index
+                  ? 'flex-1 cursor-pointer grayscale hover:flex-1.5'
                   : 'service-card-shadow flex-8 grayscale-0',
-                1 === index ? 'opacity-60 grayscale-0' : 0 !== index ? 'opacity-70' : 'opacity-100' // next card - all other cards - activeCard
+                activeService + 1 === index
+                  ? 'opacity-60 grayscale-0'
+                  : activeService !== index
+                    ? 'opacity-70'
+                    : 'opacity-100' // next card - all other cards - activeCard
               )}
               key={service.title}
               onClick={() => changeService(index)}
@@ -53,7 +50,7 @@ const Services: React.FC<ClassProps> = ({ className }) => {
                 width={1100}
                 height={560}
               />
-              {0 === index && (
+              {activeService === index && (
                 <motion.div
                   className="absolute bottom-5 left-5 right-5 z-10 flex flex-col"
                   initial={{ opacity: 0, x: -100 }}
@@ -68,7 +65,7 @@ const Services: React.FC<ClassProps> = ({ className }) => {
           ))}
         </div>
         <AnimatePresence>
-          {servicesOrder[0].listTitle && (
+          {services[activeService].listTitle && (
             <motion.div
               className="mb-20 box-content flex-col overflow-hidden px-5 flex-center"
               initial={{ height: '0', marginBottom: 0, opacity: 0 }}
@@ -77,9 +74,9 @@ const Services: React.FC<ClassProps> = ({ className }) => {
               transition={{ duration: 0.5 }}
             >
               <h4 className="mb-10 font-phosphate text-[32px] uppercase">
-                {servicesOrder[0].listTitle}
+                {services[activeService].listTitle}
               </h4>
-              {servicesOrder[0].list()}
+              {services[activeService].list()}
             </motion.div>
           )}
         </AnimatePresence>
