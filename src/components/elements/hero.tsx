@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 
 import Button from '@/components/ui/button';
 import Glow from '@/components/elements/glow';
@@ -7,14 +9,33 @@ import Link from 'next/link';
 
 import { ClassProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
+import { getSession } from '@/lib/auth';
 
 const Hero: React.FC<ClassProps> = ({ className }) => {
+  const [session, setSession] = useState(null);
+
+  useEffect(() => {
+    const fetchSession = async () => {
+      const sessionData = await getSession();
+      setSession(sessionData);
+    };
+    fetchSession();
+  }, []);
+
+  const test = async () => {
+    const res = await fetch('/api/auth');
+    const testResult = await res.json();
+    console.log('testResult', testResult);
+  };
+
   return (
     <section className={cn('container relative flex-space-between', className)}>
       <Glow className="-bottom-[400px] right-20 h-[500px] w-[320px]" />
       <Glow className="-top-20 left-20 h-[750px] w-[550px] rotate-45 opacity-75" />
       <div className="flex max-w-[790px] flex-col">
         <h1 className="font-phosphate text-[155px] leading-[0.85]">ANIMATION STUDIO</h1>
+        <p>{JSON.stringify(session, null, 2)}</p>
+        <button onClick={test}>test</button>
         <p className="mb-20 text-xl font-light">
           All you need to do is trust our extensive experience and enjoy the journey. Share your
           thoughts with us, and we will start building your story today.

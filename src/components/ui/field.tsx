@@ -24,7 +24,8 @@ const Field: React.FC<FieldProps> = ({
   error,
   register,
   options,
-  disabled
+  disabled,
+  type
 }) => {
   return (
     <div className={cn('flex flex-col gap-2', className)}>
@@ -39,6 +40,7 @@ const Field: React.FC<FieldProps> = ({
           name={name}
           placeholder={placeholder}
           disabled={disabled}
+          type={type}
         />
       ) : (
         <textarea
