@@ -81,6 +81,10 @@ export function getPreviewSrc(url: string) {
 }
 
 export const tokenTimelineToMs = (timeline: string | undefined) => {
+  if (!timeline) {
+    return 0;
+  }
+
   const number = parseInt(timeline, 10);
   const dateTime = timeline.at(-1);
 
