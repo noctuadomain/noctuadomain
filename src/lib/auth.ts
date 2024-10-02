@@ -2,10 +2,13 @@
 
 import { FieldValues } from 'react-hook-form';
 import { SignJWT, jwtVerify } from 'jose';
+import bcrypt from 'bcryptjs';
 
 import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 import { tokenTimelineToMs } from './utils';
+import { getAdminByEmail } from '@/services/admin';
+import { Admin } from '@/ts/interfaces';
 
 const secretKey = process.env.AUTH_SECRET;
 const key = new TextEncoder().encode(secretKey);
@@ -39,11 +42,21 @@ export async function decrypt(input: string): Promise<any> {
 export async function login(formData: FieldValues) {
   // Verify credentials && get the user
 
-  const user = { email: formData.email };
+  const response = await getAdminByEmail(formData.email);
+
+  const admin = response.data as Admin;
+  if (!admin?.id) {
+    throw new Error('Admin with this email was not found');
+  }
+
+  const isPasswordsEquals = await bcrypt.compare(formData.password, admin.password);
+  if (!isPasswordsEquals) {
+    throw new Error('Incorrect password');
+  }
 
   // Create the session
   const expires = new Date(Date.now() + tokenTimelineToMs(tokenTimeline));
-  const session = await encrypt({ user, expires });
+  const session = await encrypt({ admin, expires });
 
   // Save the session in a cookie
   cookies().set('session', session, { expires, httpOnly: true });

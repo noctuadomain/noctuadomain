@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import Button from '@/components/ui/button';
 import Glow from '@/components/elements/glow';
@@ -10,11 +10,12 @@ import Link from 'next/link';
 import { ClassProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
 import { getSession } from '@/lib/auth';
+import apiClient from '@/lib/axios';
 
 const Hero: React.FC<ClassProps> = ({ className }) => {
-  const [session, setSession] = useState(null);
+  const [session, setSession] = React.useState(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const fetchSession = async () => {
       const sessionData = await getSession();
       setSession(sessionData);
@@ -23,9 +24,13 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
   }, []);
 
   const test = async () => {
-    const res = await fetch('/api/auth');
-    const testResult = await res.json();
-    console.log('testResult', testResult);
+    try {
+      const authData = await apiClient.get('/api/auth');
+      console.log('testResult', authData);
+    } catch (error) {
+      console.error(error);
+      setSession(null);
+    }
   };
 
   return (
@@ -34,7 +39,7 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
       <Glow className="-top-20 left-20 h-[750px] w-[550px] rotate-45 opacity-75" />
       <div className="flex max-w-[790px] flex-col">
         <h1 className="font-phosphate text-[155px] leading-[0.85]">ANIMATION STUDIO</h1>
-        <p>{JSON.stringify(session, null, 2)}</p>
+        <p>{session && JSON.stringify(session)}</p>
         <button onClick={test}>test</button>
         <p className="mb-20 text-xl font-light">
           All you need to do is trust our extensive experience and enjoy the journey. Share your

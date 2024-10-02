@@ -2,11 +2,7 @@ import { NextResponse, NextRequest } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
-  const formData = await request.formData();
-
-  const fullName = formData.get('fullName');
-  const email = formData.get('email');
-  const message = formData.get('message');
+  const { fullName, email, message } = await request.json();
 
   const transporter = nodemailer.createTransport({
     service: process.env.SMTP_SERVICE,
@@ -40,10 +36,7 @@ export async function POST(request: NextRequest) {
       `
     });
 
-    return NextResponse.json(
-      { message: 'Message was successfully sent' },
-      { status: 200 }
-    );
+    return NextResponse.json({ message: 'Message was successfully sent' }, { status: 200 });
   } catch (error) {
     console.error(error);
 

@@ -2,13 +2,15 @@
 
 import React from 'react';
 
+import { AnimatePresence, motion } from 'framer-motion';
+
 import Title from '@/components/elements/title';
 import ProjectsCarousel from '@/components/elements/projects-carousel';
 import YouTube from '@/components/ui/youtube';
 
 import { ClassProps, Project } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
-import { AnimatePresence, motion } from 'framer-motion';
+import { getProjects } from '@/services/projects';
 
 const Projects: React.FC<ClassProps> = ({ className }) => {
   const [projects, setProjects] = React.useState<Project[]>([]);
@@ -19,8 +21,8 @@ const Projects: React.FC<ClassProps> = ({ className }) => {
   React.useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch('/api/projects');
-        const projects = (await res.json()) as Project[];
+        const res = await getProjects();
+        const projects = res.data as Project[];
 
         setProjects(projects);
       } catch (error) {
@@ -36,7 +38,7 @@ const Projects: React.FC<ClassProps> = ({ className }) => {
   const openVideo = React.useCallback((link: string) => {
     setActiveVideo(link);
   }, []);
-
+  // TODO: add loader
   return (
     <>
       <AnimatePresence>

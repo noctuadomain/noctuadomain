@@ -11,6 +11,7 @@ import Loading from '@/components/ui/loading';
 
 import { ClassProps } from '@/ts/interfaces';
 import { cn, emailOptions, validate } from '@/lib/utils';
+import { sendMessage } from '@/services/contact';
 
 const ContactForm: React.FC<ClassProps> = ({ className }) => {
   const {
@@ -21,24 +22,10 @@ const ContactForm: React.FC<ClassProps> = ({ className }) => {
   } = useForm({ mode: 'onChange' });
   const [isLoading, setIsLoading] = React.useState(false);
 
-  const sendFormData = async (formData: FieldValues) => {
+  const onSubmit = async (formData: FieldValues) => {
     setIsLoading(true);
     try {
-      const formDataToSend = new FormData();
-      for (const key in formData) {
-        if (formData.hasOwnProperty(key)) {
-          formDataToSend.append(key, formData[key]);
-        }
-      }
-      // TODO: CHANGE TO AXIOS ?
-      const response = await fetch('/api/contact', {
-        method: 'post',
-        body: formDataToSend
-      });
-
-      if (!response.ok) {
-        throw new Error(`response status: ${response.status}`);
-      }
+      await sendMessage(formData);
 
       toast.success('The message was successfully sent', { duration: 3000 });
       reset();
@@ -63,10 +50,7 @@ const ContactForm: React.FC<ClassProps> = ({ className }) => {
           }
         }}
       />
-      <form
-        className={cn('form-bg rounded-2xl p-16', className)}
-        onSubmit={handleSubmit(sendFormData)}
-      >
+      <form className={cn('form-bg rounded-2xl p-16', className)} onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-10 flex gap-4">
           <Field
             className="w-1/2"

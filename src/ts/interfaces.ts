@@ -9,6 +9,7 @@ export interface IconProps extends ClassProps, ComponentProps<'svg'> {}
 export interface Project {
   id: number;
   link: string;
+  title: string;
 }
 
 export interface Service {
@@ -26,4 +27,10 @@ export interface ServiceCard extends ClassProps {
   isActive: boolean;
   service: Service;
   changeService: (index: number) => void;
+}
+
+export interface Admin {
+  id: number;
+  email: string;
+  password: string;
 }
