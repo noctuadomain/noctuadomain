@@ -59,7 +59,11 @@ export async function login(formData: FieldValues) {
   const session = await encrypt({ admin, expires });
 
   // Save the session in a cookie
-  cookies().set('session', session, { expires, httpOnly: true });
+  cookies().set('session', session, {
+    expires,
+    httpOnly: true,
+    secure: process.env.DEVELOPMENT_STAGE === 'production'
+  });
 }
 
 export async function logout() {
@@ -87,6 +91,7 @@ export async function updateSession(request: NextRequest) {
     name: 'session',
     value: await encrypt(parsed),
     httpOnly: true,
+    secure: process.env.DEVELOPMENT_STAGE === 'production',
     expires: parsed.expires
   });
   return res;
