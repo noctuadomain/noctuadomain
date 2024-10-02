@@ -12,6 +12,7 @@ import { useRouter } from 'next/navigation';
 
 import { emailOptions, passwordOptions } from '@/lib/utils';
 import { login } from '@/lib/auth';
+import Head from 'next/head';
 
 const AdminAuth: React.FC = () => {
   const {
@@ -40,6 +41,9 @@ const AdminAuth: React.FC = () => {
 
   return (
     <>
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <Toaster
         toastOptions={{
           style: {

@@ -8,7 +8,8 @@ interface ButtonProps extends ClassProps, ComponentProps<'button'> {
   variant?: 'primary' | 'outline' | 'ghost';
 }
 
-const primary = 'bg-white text-black primary-btn-hover primary-btn-outline';
+const primary =
+  'bg-white text-black primary-btn-hover primary-btn-outline hover:transition-shadow hover:duration-300';
 const outline =
   'border border-white bg-transparent hover:text-cyan hover:border-cyan hover:transition-all hover:duration-300 outline-btn-hover';
 const ghost = 'bg-black';
