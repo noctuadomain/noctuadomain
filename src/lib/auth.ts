@@ -39,26 +39,34 @@ export async function decrypt(input: string): Promise<any> {
   return payload;
 }
 
-export async function login(formData: FieldValues) {
-  // Verify credentials && get the user
-
-  const response = await getAdminByEmail(formData.email);
-
+async function verifyAdmin(email: string): Promise<Admin> {
+  const response = await getAdminByEmail(email);
   const admin = response.data as Admin;
   if (!admin?.id) {
     throw new Error('Admin with this email was not found');
   }
+  return admin;
+}
 
-  const isPasswordsEquals = await bcrypt.compare(formData.password, admin.password);
+async function verifyPassword(inputPassword: string, storedPassword: string): Promise<void> {
+  const isPasswordsEquals = await bcrypt.compare(inputPassword, storedPassword);
   if (!isPasswordsEquals) {
     throw new Error('Incorrect password');
   }
+}
 
-  // Create the session
+export async function login(formData: FieldValues) {
+  const admin = await verifyAdmin(formData.email);
+  await verifyPassword(formData.password, admin.password);
+
   const expires = new Date(Date.now() + tokenTimelineToMs(tokenTimeline));
-  const session = await encrypt({ admin, expires });
+  const sessionPayload = {
+    id: admin.id,
+    email: admin.email,
+    expires
+  };
+  const session = await encrypt(sessionPayload);
 
-  // Save the session in a cookie
   cookies().set('session', session, {
     expires,
     httpOnly: true,
@@ -67,7 +75,6 @@ export async function login(formData: FieldValues) {
 }
 
 export async function logout() {
-  // Destroy the session
   cookies().set('session', '', { expires: new Date(0) });
 }
 
