@@ -87,7 +87,7 @@ export async function getSession() {
 
 export async function updateSession(request: NextRequest) {
   const session = request.cookies.get('session')?.value;
-  console.log('session', session);
+
   if (!session) return;
 
   // Refresh the session so it doesn't expire
