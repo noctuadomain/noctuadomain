@@ -60,7 +60,8 @@ const AdminAuth: React.FC = () => {
           onSubmit={handleSubmit(onSubmit)}
         >
           <Field
-            className="mb-10"
+            wrapperClassName="mb-10"
+            inputClassName="field-bg"
             title="Email"
             name="email"
             placeholder="admin@gmail.com"
@@ -70,6 +71,7 @@ const AdminAuth: React.FC = () => {
             error={typeof errors?.email?.message === 'string' ? errors?.email?.message : ''}
           />
           <Field
+            inputClassName="field-bg"
             title="Password"
             name="password"
             type="password"

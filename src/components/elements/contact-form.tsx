@@ -53,7 +53,8 @@ const ContactForm: React.FC<ClassProps> = ({ className }) => {
       <form className={cn('form-bg rounded-2xl p-16', className)} onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-10 flex gap-4">
           <Field
-            className="w-1/2"
+            wrapperClassName="w-1/2"
+            inputClassName="field-bg"
             title="Full Name"
             name="fullName"
             placeholder="Full Name"
@@ -63,7 +64,8 @@ const ContactForm: React.FC<ClassProps> = ({ className }) => {
             error={typeof errors?.fullName?.message === 'string' ? errors?.fullName?.message : ''}
           />
           <Field
-            className="w-1/2"
+            wrapperClassName="w-1/2"
+            inputClassName="field-bg"
             title="Email"
             type="email"
             name="email"
@@ -75,7 +77,7 @@ const ContactForm: React.FC<ClassProps> = ({ className }) => {
           />
         </div>
         <Field
-          className="mb-10"
+          inputClassName="field-bg mb-10"
           title="How can we help you?"
           name="message"
           placeholder="Describe your problem in at least 250 characters"

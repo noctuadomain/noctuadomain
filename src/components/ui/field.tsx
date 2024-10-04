@@ -2,10 +2,9 @@ import React, { ComponentProps } from 'react';
 
 import { FieldValues, RegisterOptions, UseFormRegister } from 'react-hook-form';
 
-import { ClassProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
 
-interface FieldProps extends ClassProps, ComponentProps<'input'> {
+interface FieldProps extends ComponentProps<'input'> {
   register: UseFormRegister<FieldValues>;
   name: string;
   options?: RegisterOptions;
@@ -13,10 +12,13 @@ interface FieldProps extends ClassProps, ComponentProps<'input'> {
   title: string;
   textarea?: boolean;
   error?: string;
+  wrapperClassName?: string;
+  inputClassName?: string;
 }
 
 const Field: React.FC<FieldProps> = ({
-  className,
+  wrapperClassName,
+  inputClassName,
   title,
   name,
   placeholder,
@@ -28,7 +30,7 @@ const Field: React.FC<FieldProps> = ({
   type
 }) => {
   return (
-    <div className={cn('flex flex-col gap-2', className)}>
+    <div className={cn('flex flex-col gap-2', wrapperClassName)}>
       <div className="flex items-center">
         <label className="text-lg">{title}</label>
         {error && <p className="ml-2 text-red-500">- {error}</p>}
@@ -36,7 +38,10 @@ const Field: React.FC<FieldProps> = ({
       {!textarea ? (
         <input
           {...register(name, options)}
-          className="field-bg rounded-xl p-3 disabled:pointer-events-none disabled:opacity-50"
+          className={cn(
+            'rounded-xl p-3 disabled:pointer-events-none disabled:opacity-50',
+            inputClassName
+          )}
           name={name}
           placeholder={placeholder}
           disabled={disabled}
@@ -45,7 +50,10 @@ const Field: React.FC<FieldProps> = ({
       ) : (
         <textarea
           {...register(name, options)}
-          className="field-bg max-h-56 min-h-36 rounded-xl p-3 disabled:pointer-events-none disabled:opacity-50"
+          className={cn(
+            'max-h-56 min-h-36 rounded-xl p-3 disabled:pointer-events-none disabled:opacity-50',
+            inputClassName
+          )}
           name={name}
           placeholder={placeholder}
           disabled={disabled}
