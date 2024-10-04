@@ -12,5 +12,4 @@ export const createProject = async (
   project: Omit<Project, 'id'>
 ): Promise<AxiosResponse<Project>> => apiClient.post('/api/projects', project);
 
-export const editProject = async (project: Project): Promise<AxiosResponse<Project>> =>
-  apiClient.patch('/api/projects', project);
+export const editProject = async (project: Project) => apiClient.patch('/api/projects', project);

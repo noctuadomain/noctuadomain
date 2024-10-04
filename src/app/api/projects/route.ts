@@ -60,13 +60,9 @@ export async function PATCH(request: Request) {
       return NextResponse.json({ error: 'Project ID is required' }, { status: 400 });
     }
 
-    const res = await pool.query(
-      'UPDATE projects SET link = $1, title = $2 WHERE id = $3 RETURNING *',
-      [link, title, id]
-    );
-    const project = res.rows[0] as Project;
+    await pool.query('UPDATE projects SET link = $1, title = $2 WHERE id = $3', [link, title, id]);
 
-    return NextResponse.json(project, { status: 200 });
+    return NextResponse.json({ message: 'Project edited successfully' }, { status: 200 });
   } catch (error) {
     console.error('Failed to update project:', error);
 
