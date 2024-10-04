@@ -49,11 +49,11 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({
             />
           ))}
         </motion.div>
-        <div className="projects-ellipse absolute -top-[46px] h-20 w-screen bg-black" />
-        <div className="projects-ellipse absolute -bottom-[46px] h-20 w-screen bg-black" />
+        {/* <div className="projects-ellipse absolute -top-[46px] h-20 w-screen bg-black" /> */}
+        {/* <div className="projects-ellipse absolute -bottom-[46px] h-20 w-screen bg-black" /> */}
       </div>
     </>
-  ); // FIXME: change image preview alt
+  );
 };
 
 export default React.memo(ProjectsCarousel);
