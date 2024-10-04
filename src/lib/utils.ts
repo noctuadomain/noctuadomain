@@ -15,11 +15,11 @@ export const validate = (
     required: required ? 'required' : false,
     maxLength: {
       value: maxLengthValue,
-      message: `Maximum ${maxLengthValue} characters`
+      message: `maximum ${maxLengthValue} characters`
     },
     minLength: {
       value: minLengthValue,
-      message: `Minimum ${minLengthValue} characters`
+      message: `minimum ${minLengthValue} characters`
     }
   };
 };
@@ -33,30 +33,39 @@ export const emailOptions = {
 };
 
 export const passwordOptions = {
-  required: 'Required field',
+  required: 'required field',
   maxLength: {
     value: 32,
-    message: 'Maximum 32 characters'
+    message: 'maximum 32 characters'
   },
   minLength: {
     value: 8,
-    message: 'Minimum 8 characters'
+    message: 'minimum 8 characters'
   },
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   validate: (value: any) => {
     if (!/[0-9]/.test(value)) {
-      return 'Password must contain a number';
+      return 'password must contain a number';
     }
     if (!/[a-z]/.test(value)) {
-      return 'Password must contain a lowercase letter';
+      return 'password must contain a lowercase letter';
     }
     if (!/[A-Z]/.test(value)) {
-      return 'Password must contain an uppercase letter';
+      return 'password must contain an uppercase letter';
     }
     if (!/[^\w]/.test(value)) {
-      return 'Password must contain a symbol';
+      return 'password must contain a symbol';
     }
     return true;
+  }
+};
+
+export const linkOptions = {
+  required: 'required',
+  pattern: {
+    value:
+      /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|shorts\/|watch\?.+&v=|playlist\?list=))((\w|-){11})(?:\S+)?$/,
+    message: 'only YouTube link'
   }
 };
 
