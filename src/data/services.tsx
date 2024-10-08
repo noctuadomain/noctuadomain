@@ -12,7 +12,7 @@ export const services: Service[] = [
     miniDescription: 'Creating detailed 3D models of real-world places.',
     listTitle: 'Use it for',
     list: () => (
-      <ul className="service-list flex flex-wrap gap-10 text-xl">
+      <ul className="service-list flex flex-wrap gap-10 text-xl 2xl:text-base lg:text-[14px] sm:text-[12px]">
         <li className="flex-center">
           <Image
             className="mr-3"
@@ -66,7 +66,7 @@ export const services: Service[] = [
     miniDescription: 'Designing cool characters and their amazing worlds.',
     listTitle: 'What We Can Do',
     list: () => (
-      <ul className="service-list flex flex-wrap gap-10 text-xl">
+      <ul className="service-list flex flex-wrap gap-10 text-xl 2xl:text-base lg:text-[14px] sm:text-[12px]">
         <li className="flex-center">
           <Image
             className="mr-3"
@@ -173,7 +173,7 @@ export const services: Service[] = [
     miniDescription: 'Filming and editing videos to tell stories.',
     listTitle: 'We specialize in',
     list: () => (
-      <ul className="service-list flex flex-wrap gap-10 text-xl">
+      <ul className="service-list flex flex-wrap gap-10 text-xl 2xl:text-base lg:text-[14px] sm:text-[12px]">
         <li className="flex-center">
           <Image
             className="mr-3"
@@ -238,7 +238,7 @@ export const services: Service[] = [
       'Building fun and interactive virtual reality or augmented reality experiences.',
     listTitle: 'Use AR/VR for',
     list: () => (
-      <ul className="service-list flex flex-wrap gap-10 text-xl">
+      <ul className="service-list flex flex-wrap gap-10 text-xl 2xl:text-base lg:text-[14px] sm:text-[12px]">
         <li className="flex-center">
           <Image
             className="mr-3"
@@ -298,7 +298,7 @@ export const services: Service[] = [
     id: 7,
     title: 'Performance',
     description:
-      'Every performance is a unique work of art. We offer creative solutions like interactive dance, 3D mapping, and laser shows. Our shows are crafted with interactive animation to ensure a memorable and engaging experience for your audience.\nOur performance shows are crafted with interactive animation to ensure a memorable and engaging experience for your audience.',
+      'Every performance is a unique work of art. We offer creative solutions like interactive dance, 3D mapping, and laser shows. Our shows are crafted with interactive animation to ensure a memorable and engaging experience for your audience.',
     miniDescription: 'Making sure everything runs smoothly for the best results.',
     listTitle: '',
     list: () => null,

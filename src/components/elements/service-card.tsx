@@ -13,7 +13,7 @@ const ServiceCard: React.FC<ServiceCard> = ({ className, isActive, service, chan
       className={cn(
         'relative h-[560px] overflow-hidden opacity-100 transition-all duration-700',
         isActive
-          ? 'service-card-shadow flex-8 grayscale-0'
+          ? 'service-card-shadow xl:flex-7 lg:flex-6 flex-8 grayscale-0'
           : 'flex-1 cursor-pointer opacity-50 grayscale hover:flex-1.5',
         className
       )}
@@ -31,9 +31,11 @@ const ServiceCard: React.FC<ServiceCard> = ({ className, isActive, service, chan
           className="absolute bottom-5 left-5 right-5 z-10 flex flex-col"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.4, duration: 0.3 }}
+          transition={{ delay: 0.65, duration: 0.3 }}
         >
-          <h3 className="mb-5 text-[40px] font-bold">{service.title}</h3>
+          <h3 className="mb-5 text-[40px] font-bold 2xl:text-[35px] xl:text-[30px]">
+            {service.title}
+          </h3>
           <p>{service.description}</p>
         </motion.div>
       )}
