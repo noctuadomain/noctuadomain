@@ -8,7 +8,7 @@ import { toast, Toaster } from 'react-hot-toast';
 import Title from '@/components/elements/title';
 import ProjectsCarousel from '@/components/elements/projects-carousel';
 import YouTube from '@/components/ui/youtube';
-import Loading from '@/components/ui/loading';
+
 import ProjectDialog from '@/components/elements/project-dialog';
 import Button from '@/components/ui/button';
 
