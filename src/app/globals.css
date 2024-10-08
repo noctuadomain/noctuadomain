@@ -9,6 +9,14 @@
     --font-space-grotesk: 'Space Grotesk', 'system-ui';
     --font-sora: 'Sora', 'system-ui';
     --font-phosphate: 'Phosphate', 'system-ui';
+
+    --bg-color: #060a10;
+
+    --instagram-color: #cf4c79;
+    --telegram-color: #2aabee;
+    --whatsapp-color: #00d95f;
+    --youtube-color-1: #ff3000;
+    --youtube-color-2: white;
   }
 }
 
@@ -25,7 +33,7 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 a:focus {
@@ -149,33 +157,75 @@ svg path {
 
 .instagram:hover {
   path {
-    fill: #cf4c79;
+    fill: var(--instagram-color);
   }
 }
 .telegram:hover {
   path {
-    fill: #2aabee;
+    fill: var(--telegram-color);
   }
 }
 .whatsapp:hover {
   path {
-    fill: #00d95f;
+    fill: var(--whatsapp-color);
   }
 }
 .youtube:hover {
   :first-child {
-    fill: #ff3000;
+    fill: var(--youtube-color-1);
   }
   :nth-child(2) {
-    fill: white;
+    fill: var(--youtube-color-2);
   }
+}
+
+/* default white color icons style */
+
+.instagram-white path {
+  fill: var(--instagram-color);
+}
+
+.instagram-white:hover path {
+  fill: white;
+}
+
+.telegram-white path {
+  fill: var(--telegram-color);
+}
+
+.telegram-white:hover path {
+  fill: white;
+}
+
+.whatsapp-white path {
+  fill: var(--whatsapp-color);
+}
+
+.whatsapp-white:hover path {
+  fill: white;
+}
+
+.youtube-white :first-child {
+  fill: var(--youtube-color-1);
+}
+
+.youtube-white :nth-child(2) {
+  fill: var(--youtube-color-2);
+}
+
+.youtube-white:hover :first-child {
+  fill: white;
+}
+
+.youtube-white:hover :nth-child(2) {
+  fill: var(--bg-color);
 }
 
 /* projects */
 
-.projects-ellipse {
+/* .projects-ellipse {
   clip-path: ellipse(53% 50% at 50% 50%);
-}
+} */
 
 /* services */
 
@@ -201,13 +251,13 @@ svg path {
 
 @property --myColor1 {
   syntax: '<color>';
-  initial-value: #070b10;
+  initial-value: #060a10;
   inherits: false;
 }
 
 @property --myColor2 {
   syntax: '<color>';
-  initial-value: #070b10;
+  initial-value: #060a10;
   inherits: false;
 }
 

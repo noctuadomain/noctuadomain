@@ -33,16 +33,16 @@ const config: Config = {
       center: true,
       screens: {
         sm: '100%',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-        '2xl': '1440px',
-        '3xl': '1840px'
+        md: '769px',
+        lg: '1025px',
+        xl: '1281px',
+        '2xl': '1441px',
+        '3xl': '1841px'
       }
     },
     extend: {
       colors: {
-        black: '#070B10',
+        black: '#060A10',
         white: '#F9F8F8',
         cyan: '#3ADCFF'
       },
@@ -61,8 +61,12 @@ const config: Config = {
         }
       },
       flex: {
+        '1': '1',
         '1.5': '1.5',
         '2': '2',
+        '5': '5',
+        '6': '6',
+        '7': '7',
         '8': '8'
       }
     }
