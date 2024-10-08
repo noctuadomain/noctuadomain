@@ -28,12 +28,11 @@ const Founders: React.FC<ClassProps> = ({ className }) => {
           </p>
         </div>
         <Image
-          className="h-[826px] w-[640px]"
-          src="/founders.jpg"
+          className="h-[826px] w-[550px]"
+          src="/founders.webp"
           alt="founders"
-          width={640}
+          width={550}
           height={826}
-          quality={100}
         />
         <div className="max-w-[480px] py-[284px] font-light">
           <p className="mb-4 text-2xl">
