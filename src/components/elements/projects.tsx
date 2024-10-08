@@ -111,16 +111,13 @@ const Projects: React.FC<ClassProps> = ({ className }) => {
             Manage projects
           </Button>
         )}
-        {!isLoading ? (
-          <ProjectsCarousel elements={projects} openVideo={openVideo} />
-        ) : (
-          <Loading className="mx-auto" />
-        )}
-        {!isLoading ? (
-          <ProjectsCarousel elements={reversedProjects} direction="left" openVideo={openVideo} />
-        ) : (
-          <Loading className="mx-auto" />
-        )}
+        <ProjectsCarousel elements={projects} openVideo={openVideo} isLoading={isLoading} />
+        <ProjectsCarousel
+          elements={reversedProjects}
+          direction="left"
+          openVideo={openVideo}
+          isLoading={isLoading}
+        />
       </section>
     </>
   );

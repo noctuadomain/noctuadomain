@@ -5,6 +5,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import CarouselItem from './carousel-item';
+import Loading from '@/components/ui/loading';
 
 import { ClassProps, Project } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
@@ -15,6 +16,7 @@ interface ProjectsCarouselProps extends ClassProps {
   direction?: 'left' | 'right';
   stopOnHover?: boolean;
   openVideo: (link: string) => void;
+  isLoading?: boolean;
 }
 
 const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({
@@ -22,7 +24,8 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({
   elements,
   direction = 'right',
   stopOnHover = true,
-  openVideo
+  openVideo,
+  isLoading
 }) => {
   const { ref, xTranslation, handleHoverStart, handleHoverEnd } = useInfiniteCarousel({
     initialDuration: 25,
@@ -32,8 +35,12 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({
   });
 
   return (
-    <>
-      <div className={cn('relative w-full', className)}>
+    <div className={cn('relative min-h-[516px] w-full', className)}>
+      {isLoading ? (
+        <div className="flex h-[516px] items-center justify-center">
+          <Loading className="mx-auto" />
+        </div>
+      ) : (
         <motion.div
           className="inline-flex h-[516px] gap-5"
           ref={ref}
@@ -49,10 +56,8 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({
             />
           ))}
         </motion.div>
-        {/* <div className="projects-ellipse absolute -top-[46px] h-20 w-screen bg-black" /> */}
-        {/* <div className="projects-ellipse absolute -bottom-[46px] h-20 w-screen bg-black" /> */}
-      </div>
-    </>
+      )}
+    </div>
   );
 };
 

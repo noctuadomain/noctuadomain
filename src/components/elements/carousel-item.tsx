@@ -23,7 +23,7 @@ const CarouselItem: React.FC<CarouselItemProps> = ({ element, openVideo }) => {
         width={405}
         height={441}
       />
-      <div className="z-10 mt-4 text-lg font-light opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+      <div className="z-10 mt-4 scale-95 text-lg font-light opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100">
         <h5>{element.title}</h5>
       </div>
     </div>
