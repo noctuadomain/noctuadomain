@@ -35,14 +35,19 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({
   });
 
   return (
-    <div className={cn('relative min-h-[516px] w-full', className)}>
+    <div
+      className={cn(
+        'relative min-h-[516px] w-full 2xl:min-h-[387px] lg:min-h-[302px] md:min-h-[220px]',
+        className
+      )}
+    >
       {isLoading ? (
-        <div className="flex h-[516px] items-center justify-center">
+        <div className="flex h-[516px] items-center justify-center 2xl:h-[387px] lg:h-[302px] md:h-[220px]">
           <Loading className="mx-auto" />
         </div>
       ) : (
         <motion.div
-          className="inline-flex h-[516px] gap-5"
+          className="inline-flex h-[516px] gap-5 2xl:h-[387px] 2xl:gap-4 lg:h-[302px] lg:gap-3 md:h-[220px] md:gap-2"
           ref={ref}
           onHoverStart={handleHoverStart}
           onHoverEnd={handleHoverEnd}
