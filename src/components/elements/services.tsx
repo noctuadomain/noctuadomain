@@ -31,7 +31,7 @@ const Services: React.FC<ClassProps> = ({ className }) => {
         description="turn your creative ideas into stunning animations"
         id="services"
       />
-      <section className={cn('mb-44', className)} id="services">
+      <section className={cn('lg:my-26 my-44 2xl:my-32 md:my-20', className)} id="services">
         <div className="mb-20 flex w-full 2xl:mb-14 lg:mb-12 md:mb-10">
           {services.map((service, index) => (
             <ServiceCard
