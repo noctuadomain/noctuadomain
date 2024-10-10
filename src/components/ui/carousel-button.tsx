@@ -26,7 +26,7 @@ const CarouselButton: React.FC<CarouselButtonProps> = ({
       disabled={disabled}
     >
       <Image
-        className="h-auto w-2"
+        className="h-auto w-2 2xl:w-1.5"
         src="/icons/reviews-arrow.svg"
         alt="reviews arrow"
         width={8}
