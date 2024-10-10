@@ -21,6 +21,7 @@ const Header: React.FC<ClassProps> = ({ className }) => {
             src="/logo.png"
             alt="logo"
             width={232}
+            priority
             height={40}
           />
         </div>

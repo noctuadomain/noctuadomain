@@ -32,6 +32,7 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
                 className="ml-6 transition-transform duration-300 group-hover:translate-x-3 xl:h-5 xl:w-7 xl:group-hover:translate-x-2 sm:ml-3"
                 src="/icons/arrow-right.svg"
                 alt="arrow-right"
+                priority
                 width={36}
                 height={24}
               />
@@ -43,6 +44,7 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
                 className="mr-6 group-hover:scale-[1.15] group-hover:transition-transform group-hover:duration-300 xl:size-7 sm:mr-3"
                 src="/icons/play-in-circle.svg"
                 alt="play-in-circle"
+                priority
                 width={32}
                 height={32}
               />
