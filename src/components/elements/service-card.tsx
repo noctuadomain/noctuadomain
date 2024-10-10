@@ -11,10 +11,10 @@ const ServiceCard: React.FC<ServiceCard> = ({ className, isActive, service, chan
   return (
     <div
       className={cn(
-        'relative h-[560px] overflow-hidden opacity-100 transition-all duration-700',
+        'relative h-[560px] overflow-hidden opacity-100 transition-all duration-700 md:h-[430px] sm:h-[302px]',
         isActive
-          ? 'service-card-shadow xl:flex-7 lg:flex-6 flex-8 grayscale-0'
-          : 'flex-1 cursor-pointer opacity-50 grayscale hover:flex-1.5',
+          ? 'service-card-shadow flex-8 grayscale-0 xl:flex-7 lg:flex-1'
+          : 'flex-1 cursor-pointer opacity-50 grayscale hover:flex-1.5 lg:flex-0',
         className
       )}
       onClick={() => changeService(service.id)}
@@ -33,10 +33,10 @@ const ServiceCard: React.FC<ServiceCard> = ({ className, isActive, service, chan
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.65, duration: 0.3 }}
         >
-          <h3 className="mb-5 text-[40px] font-bold 2xl:text-[35px] xl:text-[30px]">
+          <h3 className="mb-5 text-[40px] font-bold 2xl:text-[35px] xl:text-[30px] lg:text-[25px] sm:mb-2 sm:text-[20px]">
             {service.title}
           </h3>
-          <p>{service.description}</p>
+          <p className="lg:text-[14px] sm:text-[11px]">{service.description}</p>
         </motion.div>
       )}
     </div>
