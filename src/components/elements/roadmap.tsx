@@ -51,8 +51,8 @@ const Roadmap: React.FC<ClassProps> = ({ className }) => {
           loop
           poster="/roadmap.webp"
         />
-        <div className="mx-auto mt-16 max-w-[1100px] flex-col gap-14 flex-center 2xl:mt-12 xl:mt-8">
-          <p className="text-center text-xl">
+        <div className="mx-auto mt-14 max-w-[1100px] flex-col gap-14 flex-center 2xl:mt-12 2xl:gap-12 xl:mt-8 xl:gap-8">
+          <p className="px-4 text-center text-xl 2xl:text-base sm:text-[12px]">
             Take a journey through our creative process and see how we transform simple ideas into
             incredible animations. Watch the fun video, complete with cool visuals and sounds, that
             shows every exciting step we take!
