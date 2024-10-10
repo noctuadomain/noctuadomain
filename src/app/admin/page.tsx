@@ -8,11 +8,11 @@ import toast, { Toaster } from 'react-hot-toast';
 import Field from '@/components/ui/field';
 import Button from '@/components/ui/button';
 import Loading from '@/components/ui/loading';
-import { useRouter } from 'next/navigation';
+import Head from 'next/head';
 
+import { useRouter } from 'next/navigation';
 import { emailOptions, passwordOptions } from '@/lib/utils';
 import { login } from '@/lib/auth';
-import Head from 'next/head';
 
 const AdminAuth: React.FC = () => {
   const {
@@ -54,13 +54,15 @@ const AdminAuth: React.FC = () => {
         }}
       />
       <div className="container mt-20 flex-col gap-10 flex-center">
-        <h1 className="text-center text-[48px] font-medium">Admin panel authorization</h1>
+        <h1 className="text-center text-[48px] font-medium md:text-[38px] sm:text-[30px]">
+          Admin panel authorization
+        </h1>
         <form
-          className="form-bg w-[820px] rounded-2xl px-16 py-12"
+          className="form-bg w-[820px] rounded-2xl px-16 py-12 lg:w-[600px] lg:px-12 lg:py-8 md:w-[480px] md:px-6 sm:w-[340px]"
           onSubmit={handleSubmit(onSubmit)}
         >
           <Field
-            wrapperClassName="mb-10"
+            wrapperClassName="mb-10 sm:mb-4"
             inputClassName="field-bg"
             title="Email"
             name="email"
@@ -83,7 +85,7 @@ const AdminAuth: React.FC = () => {
           />
           <div className="flex">
             <Button
-              className="mx-auto mt-10 border-cyan px-14 py-4 text-cyan focus-visible:outline-white"
+              className="mx-auto mt-10 border-cyan px-14 py-4 text-cyan focus-visible:outline-white 2xl:w-[200px] xl:w-[150px] sm:mt-6 sm:w-full"
               variant="outline"
               type="submit"
               disabled={isLoading}

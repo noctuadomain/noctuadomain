@@ -18,7 +18,7 @@ const Dialog: React.FC<DialogProps> = ({ isOpen, onClose, title, tabs }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 sm:mx-5">
       <div className="relative w-full max-w-md rounded-lg bg-white pb-2 shadow-lg">
         <div className="flex items-center justify-between border-b px-6 py-4">
           <h2 className="text-xl font-semibold text-black">{title}</h2>
