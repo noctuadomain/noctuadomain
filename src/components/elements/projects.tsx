@@ -101,7 +101,7 @@ const Projects: React.FC<ClassProps> = ({ className }) => {
       />
       <section
         className={cn(
-          'lg: relative my-[134px] flex w-screen flex-col gap-24 overflow-hidden 2xl:my-[120px] 2xl:gap-20 lg:my-[107px] lg:gap-14 md:my-[80px] md:gap-10',
+          'relative my-[134px] flex w-screen flex-col gap-24 overflow-hidden 2xl:my-[120px] 2xl:gap-20 lg:my-[107px] lg:gap-14 md:my-[80px] md:gap-10 sm:mb-24 sm:mt-10',
           className
         )}
         id="portfolio"
