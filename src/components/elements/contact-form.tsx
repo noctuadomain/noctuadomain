@@ -51,9 +51,9 @@ const ContactForm: React.FC<ClassProps> = ({ className }) => {
         }}
       />
       <form className={cn('form-bg rounded-2xl p-16', className)} onSubmit={handleSubmit(onSubmit)}>
-        <div className="mb-10 flex gap-4">
+        <div className="mb-10 flex gap-4 2xl:mb-7 sm:flex-col">
           <Field
-            wrapperClassName="w-1/2"
+            wrapperClassName="w-1/2 sm:w-full"
             inputClassName="field-bg"
             title="Full Name"
             name="fullName"
@@ -64,7 +64,7 @@ const ContactForm: React.FC<ClassProps> = ({ className }) => {
             error={typeof errors?.fullName?.message === 'string' ? errors?.fullName?.message : ''}
           />
           <Field
-            wrapperClassName="w-1/2"
+            wrapperClassName="w-1/2 sm:w-full"
             inputClassName="field-bg"
             title="Email"
             type="email"
@@ -77,7 +77,7 @@ const ContactForm: React.FC<ClassProps> = ({ className }) => {
           />
         </div>
         <Field
-          inputClassName="field-bg mb-10"
+          inputClassName="field-bg mb-10 2xl:mb-7"
           title="How can we help you?"
           name="message"
           placeholder="Describe your problem in at least 250 characters"
@@ -89,7 +89,7 @@ const ContactForm: React.FC<ClassProps> = ({ className }) => {
         />
         <div className="flex">
           <Button
-            className="mx-auto border-cyan px-14 py-4 text-cyan focus-visible:outline-white"
+            className="mx-auto border-cyan px-14 py-4 text-cyan focus-visible:outline-white sm:w-full"
             variant="outline"
             type="submit"
             disabled={isLoading}
