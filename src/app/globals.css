@@ -71,16 +71,22 @@ img {
 }
 
 .text-gradient-orange {
+  background: -webkit-linear-gradient(to right, #e1a23a 0%, #f6681e 100%);
+  background: -moz-linear-gradient(to right, #e1a23a 0%, #f6681e 100%);
   background: linear-gradient(to right, #e1a23a 0%, #f6681e 100%);
   @apply text-gradient;
 }
 
 .text-gradient-red-to-blue {
+  background: -webkit-linear-gradient(to right, #95413b 0%, #371c58 50%, #0a55cd 100%);
+  background: -moz-linear-gradient(to right, #95413b 0%, #371c58 50%, #0a55cd 100%);
   background: linear-gradient(to right, #95413b 0%, #371c58 50%, #0a55cd 100%);
   @apply text-gradient;
 }
 
 .text-gradient-blue {
+  background: -webkit-linear-gradient(to right, #263284 0%, #0a55cd 100%);
+  background: -moz-linear-gradient(to right, #263284 0%, #0a55cd 100%);
   background: linear-gradient(to right, #263284 0%, #0a55cd 100%);
   @apply text-gradient;
 }
