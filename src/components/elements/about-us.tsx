@@ -16,12 +16,11 @@ const AboutUs: React.FC<ClassProps> = ({ className }) => {
       <Glow className="-left-20 bottom-20 h-[450px] w-[300px] rotate-[45deg] 3xl:h-[350px] 3xl:w-[250px] 2xl:bottom-0 2xl:blur-[60px] xl:h-[300px] xl:w-[200px] md:hidden" />
       <p className="about-us-text text-center font-phosphate text-[96px] uppercase leading-tight 2xl:text-[72px] xl:text-[66px] md:text-[54px] sm:text-[36px]">
         Noctua Production is a 3D
-        <span className="text-gradient-orange"> animation</span> and{' '}
-        <span className="text-gradient-red-to-blue">design studio</span> that transforms your ideas
-        into stunning visual content. From concept to final video, we{' '}
-        <span className="text-gradient-blue">handle</span>{' '}
-        <span className="text-gradient-orange">every step</span> with a dedicated team of
-        professionals.
+        <p className="text-gradient-orange"> animation</p> and{' '}
+        <p className="text-gradient-red-to-blue">design studio</p> that transforms your ideas into
+        stunning visual content. From concept to final video, we{' '}
+        <p className="text-gradient-blue">handle</p>{' '}
+        <p className="text-gradient-orange">every step</p> with a dedicated team of professionals.
       </p>
     </section>
   );
