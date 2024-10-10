@@ -13,7 +13,7 @@ const Showreel: React.FC<ClassProps> = ({ className }) => {
         src="/showreel.mp4"
         width={1680}
         height={1105}
-        muted
+        // muted
         // autoPlay
         // loop
         controls

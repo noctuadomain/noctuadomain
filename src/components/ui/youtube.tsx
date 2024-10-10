@@ -39,7 +39,7 @@ const YouTube: React.FC<YoutubeProps> = ({ className, link, setActiveVideo }) =>
       >
         <iframe
           className={cn(
-            'aspect-video size-[85%] 3xl:h-[75%] 2xl:h-[60%] xl:h-[55%] lg:h-[45%] md:h-[32%] sm:h-[24%]',
+            'aspect-video size-[95%] 3xl:h-[75%] 2xl:h-[60%] xl:h-[55%] lg:h-[45%] md:h-[32%] sm:h-[22%]',
             className
           )}
           width="100%"

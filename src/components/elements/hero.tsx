@@ -24,12 +24,12 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
           All you need to do is trust our extensive experience and enjoy the journey. Share your
           thoughts with us, and we will start building your story today.
         </p>
-        <div className="flex gap-5 md:flex-center">
+        <div className="flex gap-5 md:flex-center sm:gap-4">
           <Link href="#contact-us" tabIndex={-1}>
             <Button className="flip-animate group px-10">
               <span data-hover="Get in touch">Contact Us</span>
               <Image
-                className="ml-6 transition-transform duration-300 group-hover:translate-x-3 xl:h-5 xl:w-7 xl:group-hover:translate-x-2"
+                className="ml-6 transition-transform duration-300 group-hover:translate-x-3 xl:h-5 xl:w-7 xl:group-hover:translate-x-2 sm:ml-3"
                 src="/icons/arrow-right.svg"
                 alt="arrow-right"
                 width={36}
@@ -40,7 +40,7 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
           <Link href="#showreel" tabIndex={-1}>
             <Button className="group px-10" variant="ghost">
               <Image
-                className="mr-6 group-hover:scale-[1.15] group-hover:transition-transform group-hover:duration-300 xl:size-7"
+                className="mr-6 group-hover:scale-[1.15] group-hover:transition-transform group-hover:duration-300 xl:size-7 sm:mr-3"
                 src="/icons/play-in-circle.svg"
                 alt="play-in-circle"
                 width={32}
@@ -50,7 +50,7 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
             </Button>
           </Link>
         </div>
-        <div className="my-12 hidden gap-8 md:flex-center">
+        <div className="my-12 hidden gap-12 md:flex-center">
           {socials.map(social => (
             <Link
               key={social.name}
@@ -59,7 +59,7 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
               aria-label="Connect with us on our social media platforms"
             >
               <social.icon
-                className={`box-content size-[20px] ${social.name.toLowerCase()}-white`}
+                className={`box-content size-[28px] ${social.name.toLowerCase()}-white`}
               />
             </Link>
           ))}
