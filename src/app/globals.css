@@ -269,3 +269,82 @@ svg path {
   --myColor1: #1b1c3629;
   --myColor2: #70717a29;
 }
+
+/* custom adaptive */
+
+@media (max-width: 768px) {
+  .list-checkmark {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 700px) {
+  .owl-halfmoon {
+    width: 540px !important;
+    height: 540px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .animation-studio {
+    font-size: 100px !important;
+  }
+
+  .animation-studio-desc {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .owl-halfmoon {
+    width: 460px !important;
+    height: 460px !important;
+  }
+
+  .animation-studio {
+    font-size: 85px !important;
+  }
+
+  .animation-studio-desc {
+    font-size: 13px !important;
+  }
+
+  .footer-owl-halfmoon {
+    width: 131px !important;
+    height: 131px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .list-checkmark {
+    width: 20px;
+    height: 20px;
+  }
+
+  .owl-halfmoon {
+    width: 410px !important;
+    height: 410px !important;
+  }
+
+  .animation-studio {
+    margin-top: 20px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .animation-studio {
+    font-size: 70px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .animation-studio-desc {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-us-text {
+    font-size: 30px !important;
+  }
+}
