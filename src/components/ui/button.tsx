@@ -39,7 +39,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       <div
         className={cn(
-          'flex flex-shrink-0 items-center',
+          'flex flex-shrink-0 items-center justify-center',
           variant === 'ghost' ? ghostChildren : null
         )}
       >
