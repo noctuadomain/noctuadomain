@@ -26,7 +26,7 @@ const config: Config = {
         max: '768px'
       },
       sm: {
-        max: '480px'
+        max: '500px'
       }
     },
     container: {
@@ -61,6 +61,7 @@ const config: Config = {
         }
       },
       flex: {
+        '0': '0',
         '1': '1',
         '1.5': '1.5',
         '2': '2',

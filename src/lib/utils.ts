@@ -15,11 +15,11 @@ export const validate = (
     required: required ? 'required' : false,
     maxLength: {
       value: maxLengthValue,
-      message: `maximum ${maxLengthValue} characters`
+      message: `max ${maxLengthValue} characters`
     },
     minLength: {
       value: minLengthValue,
-      message: `minimum ${minLengthValue} characters`
+      message: `min ${minLengthValue} characters`
     }
   };
 };
@@ -28,7 +28,7 @@ export const emailOptions = {
   required: 'required',
   pattern: {
     value: /\S+@\S+\.\S+/,
-    message: 'invalid email format'
+    message: 'invalid format'
   }
 };
 
@@ -36,11 +36,11 @@ export const passwordOptions = {
   required: 'required field',
   maxLength: {
     value: 32,
-    message: 'maximum 32 characters'
+    message: 'max 32 characters'
   },
   minLength: {
     value: 8,
-    message: 'minimum 8 characters'
+    message: 'min 8 characters'
   },
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   validate: (value: any) => {
