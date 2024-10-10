@@ -60,9 +60,11 @@ img {
 /* about us text gradient */
 
 .text-gradient {
-  background: linear-gradient(to right, #263284 0%, #0a55cd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 
   background-clip: text;
   color: transparent;
