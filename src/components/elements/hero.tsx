@@ -2,20 +2,44 @@
 
 import React from 'react';
 
+import { AnimatePresence, motion } from 'framer-motion';
+
 import Button from '@/components/ui/button';
 import Glow from '@/components/elements/glow';
 import Image from 'next/image';
 import Link from 'next/link';
+import YouTube from '../ui/youtube';
 
 import { ClassProps } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
 import socials from '@/data/socials';
 
+const roadmapURI = 'https://www.youtube.com/watch?v=uz8XBUhl3J8';
+
 const Hero: React.FC<ClassProps> = ({ className }) => {
+  const [activeVideo, setActiveVideo] = React.useState<string>('');
+
+  const openVideo = React.useCallback((link: string) => {
+    setActiveVideo(link);
+  }, []);
+
   return (
     <section className={cn('container relative px-4 flex-space-between md:flex-col', className)}>
       <Glow className="-bottom-[400px] right-20 h-[500px] w-[320px] 3xl:h-[400px] 3xl:w-[270px] 2xl:blur-[60px] xl:-bottom-[300px] xl:right-6 xl:h-[320px] xl:w-[180px] md:-bottom-[200px] md:-right-32 md:size-[335px] sm:hidden" />
       <Glow className="-top-20 left-20 h-[750px] w-[550px] rotate-45 opacity-75 3xl:h-[600px] 3xl:w-[400px] 2xl:blur-[60px] xl:-top-10 xl:h-[420px] xl:w-[320px] lg:h-[350px] lg:w-[250px] md:-left-20 md:-top-20 md:size-[400px] sm:hidden" />
+      <AnimatePresence>
+        {activeVideo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-50"
+          >
+            <YouTube link={activeVideo} setActiveVideo={setActiveVideo} />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="flex max-w-[790px] flex-col md:order-2">
         <h1 className="animation-studio font-phosphate text-[155px] leading-[0.85] 3xl:text-[125px] 2xl:text-[116px] xl:text-[95px] lg:text-[80px] md:mb-5 md:text-center md:text-[116px]">
           ANIMATION STUDIO
@@ -38,19 +62,17 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
               />
             </Button>
           </Link>
-          <Link href="#showreel" tabIndex={-1}>
-            <Button className="group px-10" variant="ghost">
-              <Image
-                className="mr-6 group-hover:scale-[1.15] group-hover:transition-transform group-hover:duration-300 xl:size-7 sm:mr-3"
-                src="/icons/play-in-circle.svg"
-                alt="play-in-circle"
-                priority
-                width={32}
-                height={32}
-              />
-              Watch video
-            </Button>
-          </Link>
+          <Button className="group px-10" variant="ghost" onClick={() => openVideo(roadmapURI)}>
+            <Image
+              className="mr-6 group-hover:scale-[1.15] group-hover:transition-transform group-hover:duration-300 xl:size-7 sm:mr-3"
+              src="/icons/play-in-circle.svg"
+              alt="play-in-circle"
+              priority
+              width={32}
+              height={32}
+            />
+            Watch showreel
+          </Button>
         </div>
         <div className="my-12 hidden gap-12 md:flex-center">
           {socials.map(social => (

@@ -67,7 +67,7 @@ const Services: React.FC<ClassProps> = ({ className }) => {
               </motion.div>
             )}
           </AnimatePresence>
-          <div className="container grid auto-rows-min grid-cols-4 gap-14 xl:gap-8 lg:gap-5 md:px-4 sm:order-1 sm:mb-5 sm:mt-10 sm:flex sm:grid-cols-none sm:gap-2 sm:overflow-y-auto">
+          <div className="container grid auto-rows-min grid-cols-4 gap-14 xl:gap-8 lg:gap-5 md:px-4 sm:order-1 sm:mb-5 sm:mt-10 sm:flex sm:grid-cols-none sm:gap-2 sm:overflow-y-scroll">
             {services.map((service, index) => (
               <ServiceMiniCard
                 isActive={activeService === index}

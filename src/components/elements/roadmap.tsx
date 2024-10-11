@@ -49,7 +49,7 @@ const Roadmap: React.FC<ClassProps> = ({ className }) => {
           muted
           autoPlay
           loop
-          poster="/roadmap.webp"
+          // poster="/roadmap.webp"
         />
         <div className="mx-auto mt-14 max-w-[1100px] flex-col gap-14 flex-center 2xl:mt-12 2xl:gap-12 xl:mt-8 xl:gap-8">
           <p className="px-4 text-center text-xl 2xl:text-base sm:text-[12px]">
@@ -63,7 +63,7 @@ const Roadmap: React.FC<ClassProps> = ({ className }) => {
             onClick={() => openVideo(roadmapURI)}
           >
             <Play className="mr-3" />
-            Watch a demo
+            Watch a full video
           </Button>
         </div>
       </section>

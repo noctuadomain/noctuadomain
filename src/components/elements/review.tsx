@@ -19,7 +19,7 @@ const Review: React.FC<ReviewProps> = ({ className, image, name, position, comme
           src={image}
           alt="review-1"
           width={210}
-          height={0}
+          height={300}
         />
       </div>
       <div className="flex flex-col sm:text-center">
