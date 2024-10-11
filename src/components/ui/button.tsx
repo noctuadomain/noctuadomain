@@ -17,7 +17,7 @@ const ghost = 'bg-black';
 const ghostChildren =
   'underline decoration-transparent underline-offset-4 transition-colors duration-300 group-hover:decoration-white';
 
-const adaptive = '2xl:px-7 xl:px-4 xl:text-base xl:py-3';
+const adaptive = '2xl:px-7 xl:px-4 xl:text-base xl:py-3 sm:p-3 sm:text-[14px] leading-[20px]';
 
 const Button: React.FC<ButtonProps> = ({
   className,
@@ -29,7 +29,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       className={cn(
-        'group rounded-lg p-4 text-xl font-medium active:translate-y-[1px] active:scale-[0.99] active:transition-transform disabled:pointer-events-none disabled:opacity-50 sm:p-3',
+        'group rounded-lg p-4 text-xl font-medium active:translate-y-[1px] active:scale-[0.99] active:transition-transform disabled:pointer-events-none disabled:opacity-50',
         variant === 'primary' ? primary : variant === 'outline' ? outline : ghost,
         adaptive,
         className
