@@ -68,6 +68,9 @@ img {
 
   background-clip: text;
   color: transparent;
+
+  -webkit-box-decoration-break: clone; /* trying to fix Safari cuts gradient text */
+  box-decoration-break: clone;
 }
 
 .text-gradient-orange {

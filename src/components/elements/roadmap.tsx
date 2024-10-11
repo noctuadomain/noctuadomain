@@ -46,9 +46,10 @@ const Roadmap: React.FC<ClassProps> = ({ className }) => {
           src="/roadmap.mp4"
           width={1800}
           height={1400}
-          muted
           autoPlay
+          muted
           loop
+          playsInline // for Safari
           // poster="/roadmap.webp"
         />
         <div className="mx-auto mt-14 max-w-[1100px] flex-col gap-14 flex-center 2xl:mt-12 2xl:gap-12 xl:mt-8 xl:gap-8">
