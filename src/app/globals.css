@@ -60,20 +60,20 @@ img {
 /* about us text gradient */
 
 .text-gradient {
-  -webkit-text-fill-color: transparent;
-  /* -webkit-box-decoration-break: clone !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-box-decoration-break: clone !important;
   box-decoration-break: clone !important;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 
   padding: 0 10px;
-  margin: 0 -10px; */
+  margin: 0 -10px;
 
-  /* -moz-background-clip: text !important;
-  -moz-text-fill-color: transparent !important; */
+  -moz-background-clip: text !important;
+  -moz-text-fill-color: transparent !important;
 
-  background-clip: text;
-  -webkit-background-clip: text;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
 }
 
 .text-gradient-orange {

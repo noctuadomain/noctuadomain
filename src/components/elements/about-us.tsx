@@ -17,9 +17,9 @@ const AboutUs: React.FC<ClassProps> = ({ className }) => {
       <div className="about-us-text text-center font-phosphate text-8xl uppercase 2xl:text-7xl xl:text-6xl md:text-5xl sm:text-4xl">
         Noctua Production is a 3D
         <div className="text-gradient-orange"> animation</div> and{' '}
-        <span className="text-gradient-red-to-blue">design studio</span> that transforms your ideas
-        into stunning visual content. From concept to final video, we{' '}
-        <span className="text-gradient-blue">handle</span>{' '}
+        <em className="text-gradient-red-to-blue">design studio</em> that transforms your ideas into
+        stunning visual content. From concept to final video, we{' '}
+        <em className="text-gradient-blue inline-block">handle</em>{' '}
         <span className="text-gradient-orange">every step</span> with a dedicated team of
         professionals.
       </div>
