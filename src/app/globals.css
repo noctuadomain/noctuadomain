@@ -389,11 +389,11 @@ svg path {
 }
 
 .service-mini-cards-scroll-area {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
   overflow-x: auto !important;
   -webkit-overflow-scrolling: touch !important; /* Smooth scrolling for iOS */
   white-space: nowrap; /* Prevents wrapping of child elements */
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: nowrap; /* Prevent wrapping to new lines */
 }
 
 @media (max-width: 500px) {
