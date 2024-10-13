@@ -9,7 +9,7 @@ const ServiceMiniCard = React.forwardRef<HTMLDivElement, ServiceCard>(
       <div
         ref={ref}
         className={cn(
-          'w-[330px] flex-shrink-0 rounded-2xl p-5 xl:w-[240px] xl:p-4 md:w-[200px] md:p-2.5 sm:h-[140px] sm:w-[160px] sm:rounded-lg sm:p-2',
+          'inline-block w-[330px] flex-shrink-0 rounded-2xl p-5 xl:w-[240px] xl:p-4 md:w-[200px] md:p-2.5 sm:h-[140px] sm:w-[160px] sm:rounded-lg sm:p-2',
           isActive ? 'service-mini-card-bg' : 'cursor-pointer bg-transparent',
           className
         )}
