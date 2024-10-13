@@ -67,29 +67,8 @@ img {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
   -webkit-box-decoration-break: clone;
-
-  display: flex;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-left: 30px;
-
-  background: none;
-  color: transparent;
-}
-
-.text-gradient:after {
-  position: absolute;
-  content: attr(title);
-  color: red;
-  display: block;
-
-  background: linear-gradient(79deg, blue 0%, purple 121%);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text; /* webkit browsers only */
-  -webkit-text-fill-color: transparent; /* webkit browsers only*/
 }
 
 .text-gradient-orange {
