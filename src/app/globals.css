@@ -77,7 +77,7 @@ img {
 }
 
 .text-gradient-orange {
-  background-image: linear-gradient(to right, #e1a23a 0%, #f6681e 100%);
+  background: linear-gradient(to right, #e1a23a 0%, #f6681e 100%);
   @apply text-gradient;
 }
 
