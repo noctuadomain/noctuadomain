@@ -39,17 +39,21 @@ const YouTube: React.FC<YoutubeProps> = ({ className, link, setActiveVideo }) =>
       >
         <iframe
           className={cn(
-            'aspect-video size-[95%] 3xl:h-[75%] 2xl:h-[60%] xl:h-[55%] lg:h-[45%] md:h-[32%] sm:h-[22%]',
+            'aspect-video',
+            'h-[80%]',
+            '2xl:h-[70%]',
+            'xl:h-[65%]',
+            'lg:h-[50%]',
+            'md:h-[40%]',
+            'sm:h-[25%]',
             className
           )}
-          width="100%"
-          height="100%"
           src={`https://www.youtube.com/embed/${videoId}`}
           frameBorder="0"
           allow="picture-in-picture"
           allowFullScreen
           title="YouTube video player"
-        ></iframe>
+        />
       </div>
     </>
   );
