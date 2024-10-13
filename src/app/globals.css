@@ -69,8 +69,8 @@ img {
   padding: 0 10px;
   margin: 0 -10px; */
 
-  -moz-background-clip: text !important;
-  -moz-text-fill-color: transparent !important;
+  /* -moz-background-clip: text !important;
+  -moz-text-fill-color: transparent !important; */
 
   background-clip: text !important;
   -webkit-background-clip: text !important;
