@@ -76,7 +76,7 @@ const Services: React.FC<ClassProps> = ({ className }) => {
         id="services"
       >
         <div
-          className="service-mini-cards-scroll-area mb-8 flex gap-10 pl-10 transition-transform duration-700 xl:gap-8 lg:gap-5 md:px-4 sm:order-2 sm:mb-5 sm:mt-2 sm:gap-2 sm:overflow-x-scroll"
+          className="service-mini-cards-scroll-area mb-8 flex h-[140px] gap-10 pl-10 transition-transform duration-700 xl:gap-8 lg:gap-5 md:px-4 sm:order-2 sm:mb-5 sm:mt-2 sm:gap-2"
           ref={containerRef}
         >
           {services.map((service, index) => (
