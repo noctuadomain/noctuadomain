@@ -389,6 +389,8 @@ svg path {
 }
 
 .service-mini-cards-scroll-area {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
