@@ -14,7 +14,7 @@ import Footer from '@/components/elements/footer';
 
 const Home: React.FC = () => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <Header />
       <Hero />
       <AboutUs />

@@ -396,6 +396,6 @@ svg path {
 @media (max-width: 500px) {
   .service-mini-cards-scroll-area {
     overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+    /* -webkit-overflow-scrolling: touch !important; */
   }
 }
