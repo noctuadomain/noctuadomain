@@ -60,20 +60,36 @@ img {
 /* about us text gradient */
 
 .text-gradient {
-  -webkit-text-fill-color: transparent !important;
-  -webkit-box-decoration-break: clone !important;
-  box-decoration-break: clone !important;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 
-  padding: 0 10px;
-  margin: 0 -10px;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
 
-  -moz-background-clip: text !important;
-  -moz-text-fill-color: transparent !important;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 30px;
 
-  background-clip: text !important;
-  -webkit-background-clip: text !important;
+  background: none;
+  color: transparent;
+}
+
+.text-gradient:after {
+  position: absolute;
+  content: attr(title);
+  color: red;
+  display: block;
+
+  background: linear-gradient(79deg, blue 0%, purple 121%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text; /* webkit browsers only */
+  -webkit-text-fill-color: transparent; /* webkit browsers only*/
 }
 
 .text-gradient-orange {
