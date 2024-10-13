@@ -60,7 +60,7 @@ img {
 /* about us text gradient */
 
 .text-gradient {
-  -webkit-text-fill-color: transparent !important;
+  -webkit-text-fill-color: transparent;
   /* -webkit-box-decoration-break: clone !important;
   box-decoration-break: clone !important;
   -webkit-transform: translateZ(0);
@@ -72,8 +72,8 @@ img {
   /* -moz-background-clip: text !important;
   -moz-text-fill-color: transparent !important; */
 
-  background-clip: text !important;
-  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .text-gradient-orange {
