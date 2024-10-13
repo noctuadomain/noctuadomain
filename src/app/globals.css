@@ -60,27 +60,24 @@ img {
 /* about us text gradient */
 
 .text-gradient {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  -webkit-text-rendering: optimizeSpeed;
-  text-rendering: optimizeSpeed;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-box-decoration-break: clone !important;
+  box-decoration-break: clone !important;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 
   padding: 0 10px;
   margin: 0 -10px;
 
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+  -moz-background-clip: text !important;
+  -moz-text-fill-color: transparent !important;
 
-  background-clip: text;
-  color: transparent;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
 }
 
 .text-gradient-orange {
-  background: linear-gradient(to right, #e1a23a 0%, #f6681e 100%);
+  background-image: linear-gradient(to right, #e1a23a 0%, #f6681e 100%);
   @apply text-gradient;
 }
 
