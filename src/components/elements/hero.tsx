@@ -41,10 +41,10 @@ const Hero: React.FC<ClassProps> = ({ className }) => {
         )}
       </AnimatePresence>
       <div className="flex max-w-[790px] flex-col md:order-2">
-        <h1 className="animation-studio font-phosphate text-[155px] leading-[0.85] 3xl:text-[125px] 2xl:text-[116px] xl:text-[95px] lg:text-[80px] md:mb-5 md:text-center md:text-[116px]">
+        <h1 className="animation-studio font-phosphate text-[155px] leading-[1] 3xl:text-[125px] 2xl:text-[116px] xl:text-[95px] lg:text-[80px] md:mb-5 md:text-center md:text-[116px]">
           ANIMATION STUDIO
         </h1>
-        <p className="animation-studio-desc mb-20 text-xl font-light 2xl:text-base xl:mb-14 xl:text-[14px] lg:mb-10 lg:text-[12px] lg:leading-5 md:mb-5 md:text-center md:text-base">
+        <p className="animation-studio-desc mb-20 text-xl font-light 2xl:text-base xl:mb-14 xl:text-sm lg:mb-10 lg:text-xs lg:leading-5 md:mb-5 md:text-center md:text-base">
           All you need to do is trust our extensive experience and enjoy the journey. Share your
           thoughts with us, and we will start building your story today.
         </p>

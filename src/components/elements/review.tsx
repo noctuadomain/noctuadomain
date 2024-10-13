@@ -24,8 +24,8 @@ const Review: React.FC<ReviewProps> = ({ className, image, name, position, comme
       </div>
       <div className="flex flex-col sm:text-center">
         <strong className="text-2xl font-bold 2xl:text-xl sm:text-base">{name}</strong>
-        <p className="mb-5 text-xl opacity-50 2xl:mb-3 2xl:text-base sm:text-[14px]">{position}</p>
-        <p className="text-xl 2xl:text-base sm:text-[12px] sm:leading-[18px]">{comment}</p>
+        <p className="mb-5 text-xl opacity-50 2xl:mb-3 2xl:text-base sm:text-sm">{position}</p>
+        <p className="text-xl 2xl:text-base sm:text-xs sm:leading-[18px]">{comment}</p>
       </div>
     </div>
   );

@@ -21,14 +21,14 @@ const Footer: React.FC<ClassProps> = ({ className }) => {
             height={169}
           />
           <div className="absolute bottom-3 right-5 select-none font-sans">
-            <h1 className="text-[12px] font-extralight leading-[12px] sm:text-[10px]">
+            <h1 className="text-xs font-extralight sm:text-[10px]">
               NOCTUA<strong className="m-0 font-semibold">DOMAIN</strong>
             </h1>
             <h1 className="text-right text-[7px]">PRODUCTION</h1>
           </div>
         </div>
         <nav>
-          <ul className="flex gap-10 text-[12px] font-bold uppercase lg:gap-5 sm:text-[11px]">
+          <ul className="flex gap-10 text-xs font-bold uppercase lg:gap-5 sm:text-[11px]">
             {sections.map(section => (
               <li
                 className="flex-shrink-0 transition-colors hover:text-cyan hover:duration-300"
@@ -41,7 +41,7 @@ const Footer: React.FC<ClassProps> = ({ className }) => {
         </nav>
       </div>
       <div className="flex items-center justify-between border-t border-solid border-[#202328] pt-6 sm:flex-col sm:border-none">
-        <p className="font-sora 2xl:text-[14px] md:text-[10px] sm:order-2 sm:mt-4 sm:text-[11px]">
+        <p className="font-sora 2xl:text-sm md:text-[10px] sm:order-2 sm:mt-4 sm:text-[11px]">
           © noctuadomainproduction 2024. All rights reserved
         </p>
         <div className="flex gap-10 xl:gap-4">

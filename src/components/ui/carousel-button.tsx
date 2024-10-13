@@ -18,7 +18,7 @@ const CarouselButton: React.FC<CarouselButtonProps> = ({
   return (
     <button
       className={cn(
-        'absolute rounded-full border border-solid border-[#4593F3] bg-cyan p-4 flex-center disabled:pointer-events-none disabled:opacity-30 disabled:transition-opacity disabled:duration-300',
+        'rounded-full border border-solid border-[#4593F3] bg-cyan p-4 flex-center disabled:pointer-events-none disabled:opacity-30 disabled:transition-opacity disabled:duration-300',
         className
       )}
       style={{ transform: `rotate(${direction === 'prev' ? '180deg' : null})` }}

@@ -33,7 +33,7 @@ const Field: React.FC<FieldProps> = ({
     <div className={cn('flex flex-col gap-2', wrapperClassName)}>
       <div className="flex items-center">
         <label className="text-lg 2xl:text-base">{title}</label>
-        {error && <p className="ml-2 text-red-500 2xl:text-[14px]">- {error}</p>}
+        {error && <p className="ml-2 text-red-500 2xl:text-sm">- {error}</p>}
       </div>
       {!textarea ? (
         <input

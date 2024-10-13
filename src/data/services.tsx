@@ -12,7 +12,7 @@ export const services: Service[] = [
     miniDescription: 'Creating detailed 3D models of real-world places.',
     listTitle: 'Use it for',
     list: () => (
-      <ul className="service-list flex flex-wrap gap-10 text-xl 2xl:text-base 2xl:gap-6 lg:text-[14px] lg:gap-5 md:text-[12px] sm:text-[10px] sm:gap-2">
+      <ul className="service-list flex flex-wrap gap-10 text-xl 2xl:text-base 2xl:gap-6 lg:text-sm lg:gap-5 md:text-xs sm:text-[10px] sm:gap-2">
         <li className="flex-center">
           <Image
             className="list-checkmark mr-3"
@@ -66,7 +66,7 @@ export const services: Service[] = [
     miniDescription: 'Designing cool characters and their amazing worlds.',
     listTitle: 'What We Can Do',
     list: () => (
-      <ul className="service-list flex flex-wrap gap-10 text-xl 2xl:text-base 2xl:gap-6 lg:text-[14px] lg:gap-5 md:text-[12px] sm:text-[10px] sm:gap-2">
+      <ul className="service-list flex flex-wrap gap-10 text-xl 2xl:text-base 2xl:gap-6 lg:text-sm lg:gap-5 md:text-xs sm:text-[10px] sm:gap-2">
         <li className="flex-center">
           <Image
             className="list-checkmark mr-3"
@@ -173,7 +173,7 @@ export const services: Service[] = [
     miniDescription: 'Filming and editing videos to tell stories.',
     listTitle: 'We specialize in',
     list: () => (
-      <ul className="service-list flex flex-wrap gap-10 text-xl 2xl:text-base 2xl:gap-6 lg:text-[14px] lg:gap-5 md:text-[12px] sm:text-[10px] sm:gap-2">
+      <ul className="service-list flex flex-wrap gap-10 text-xl 2xl:text-base 2xl:gap-6 lg:text-sm lg:gap-5 md:text-xs sm:text-[10px] sm:gap-2">
         <li className="flex-center">
           <Image
             className="list-checkmark mr-3"
@@ -238,7 +238,7 @@ export const services: Service[] = [
       'Building fun and interactive virtual reality or augmented reality experiences.',
     listTitle: 'Use AR/VR for',
     list: () => (
-      <ul className="service-list flex flex-wrap gap-10 text-xl 2xl:text-base 2xl:gap-6 lg:text-[14px] lg:gap-5 md:text-[12px] sm:text-[10px] sm:gap-2">
+      <ul className="service-list flex flex-wrap gap-10 text-xl 2xl:text-base 2xl:gap-6 lg:text-sm lg:gap-5 md:text-xs sm:text-[10px] sm:gap-2">
         <li className="flex-center">
           <Image
             className="list-checkmark mr-3"

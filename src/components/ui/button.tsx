@@ -17,7 +17,7 @@ const ghost = 'bg-black';
 const ghostChildren =
   'underline decoration-transparent underline-offset-4 transition-colors duration-300 group-hover:decoration-white';
 
-const adaptive = '2xl:px-7 xl:px-4 xl:text-base xl:py-3 sm:p-3 sm:text-[14px] leading-[20px]';
+const adaptive = '2xl:px-7 xl:px-4 xl:text-base xl:py-3 sm:p-3 sm:text-sm leading-[20px]';
 
 const Button: React.FC<ButtonProps> = ({
   className,

@@ -61,13 +61,13 @@ const Reviews: React.FC<ClassProps> = ({ className }) => {
             </div>
           </div>
           <CarouselButton
-            className="-left-5 top-1/2 box-content size-[44px] -translate-y-1/2 p-0 2xl:size-[33px]"
+            className="absolute -left-5 top-1/2 box-content size-[44px] -translate-y-1/2 p-0 2xl:size-[33px]"
             direction="prev"
             onClick={prevReview}
             disabled={currReview <= 0}
           />
           <CarouselButton
-            className="-right-5 top-1/2 box-content size-[44px] -translate-y-1/2 p-0 2xl:size-[33px]"
+            className="absolute -right-5 top-1/2 box-content size-[44px] -translate-y-1/2 p-0 2xl:size-[33px]"
             direction="next"
             onClick={nextReview}
             disabled={currReview >= reviews.length - 1}
