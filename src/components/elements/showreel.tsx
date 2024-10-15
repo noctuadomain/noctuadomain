@@ -17,6 +17,7 @@ const Showreel: React.FC<ClassProps> = ({ className }) => {
         autoPlay
         loop
         playsInline // for Safari
+        preload="none"
         poster="/poster.webp"
       />
     </section>
