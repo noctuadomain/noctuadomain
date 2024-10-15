@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Image from 'next/image';
+
 import { type ServiceCard } from '@/ts/interfaces';
 import { cn } from '@/lib/utils';
 
