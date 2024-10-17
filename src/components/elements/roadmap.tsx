@@ -50,7 +50,6 @@ const Roadmap: React.FC<ClassProps> = ({ className }) => {
           muted
           loop
           playsInline // for Safari
-          preload="none"
           // poster="/roadmap.webp"
         />
         <div className="mx-auto mt-14 max-w-[1100px] flex-col gap-14 flex-center 2xl:mt-12 2xl:gap-12 xl:mt-8 xl:gap-8">

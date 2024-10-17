@@ -59,7 +59,7 @@ img {
 
 /* about us text gradient */
 
-.text-gradient {
+/* .text-gradient {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 
@@ -67,21 +67,24 @@ img {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 .text-gradient-orange {
-  background: linear-gradient(to right, #e1a23a 0%, #f6681e 100%);
-  @apply text-gradient;
+  color: #f6681e;
+  /* background: linear-gradient(to right, #e1a23a 0%, #f6681e 100%); */
+  /* @apply text-gradient; */
 }
 
 .text-gradient-red-to-blue {
-  background: linear-gradient(to right, #95413b 0%, #371c58 50%, #0a55cd 100%);
-  @apply text-gradient;
+  color: #0a55cd;
+  /* background: linear-gradient(to right, #95413b 0%, #371c58 50%, #0a55cd 100%); */
+  /* @apply text-gradient; */
 }
 
 .text-gradient-blue {
-  background: linear-gradient(to right, #263284 0%, #0a55cd 100%);
-  @apply text-gradient;
+  color: #0a55cd;
+  /* background: linear-gradient(to right, #263284 0%, #0a55cd 100%); */
+  /* @apply text-gradient; */
 }
 
 /* form bg gradient */
