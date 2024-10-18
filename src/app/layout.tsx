@@ -4,7 +4,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 
 const phosphate = localFont({
-  src: './fonts/PhosphateSolid.ttf',
+  src: './fonts/PhosphatePro-Solid.ttf',
   variable: '--font-phosphate',
   weight: '400'
 });
