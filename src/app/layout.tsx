@@ -22,14 +22,15 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: 'NoctuaDomain Production',
   description: 'NoctuaDomain 3D animation and design studio',
-  keywords: '3D animation, design studio, NoctuaDomain, animation, design, studio',
+  keywords:
+    '3D animation, 3D, design studio, NoctuaDomain, noctua, noctua design, noctua studio, animation, design, studio',
   openGraph: {
     title: 'NoctuaDomain Production',
     description: 'NoctuaDomain 3D animation and design studio',
-    url: 'https://noctua-v2.vercel.app',
+    url: 'https://noctuadomain.com',
     images: [
       {
-        url: 'https://noctua-v2.vercel.app/owl_halfmoon.png',
+        url: 'https://noctuadomain.com/owl_halfmoon.png',
         width: 900,
         height: 900,
         alt: 'NoctuaDomain Logo'
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     description: 'NoctuaDomain 3D animation and design studio',
     images: [
       {
-        url: 'https://noctua-v2.vercel.app/owl_halfmoon.png',
+        url: 'https://noctuadomain.com/owl_halfmoon.png',
         width: 900,
         height: 900,
         alt: 'NoctuaDomain Logo'
