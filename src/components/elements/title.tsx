@@ -17,12 +17,10 @@ const Title: React.FC<TitleProps> = ({ className, title, description, ...props }
       )}
       {...props}
     >
-      <h2 className="mb-5 text-8xl !leading-[1.25] 2xl:text-7xl lg:text-[66px] md:text-6xl sm:mb-3 sm:text-3xl">
+      <h2 className="mb-5 text-8xl 2xl:text-7xl lg:text-[66px] md:text-6xl sm:mb-3 sm:text-3xl">
         {title}
       </h2>
-      <h3 className="text-5xl !leading-[1.25] 2xl:text-4xl lg:text-3xl md:text-2xl sm:text-sm">
-        {description}
-      </h3>
+      <h3 className="text-5xl 2xl:text-4xl lg:text-3xl md:text-2xl sm:text-sm">{description}</h3>
     </div>
   );
 };
