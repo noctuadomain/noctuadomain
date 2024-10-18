@@ -20,7 +20,7 @@ const Roadmap: React.FC<ClassProps> = ({ className }) => {
   const openVideo = React.useCallback((link: string) => {
     setActiveVideo(link);
   }, []);
-  //FIXME: FIX CSL (bc of poster???)
+
   return (
     <>
       <Title
