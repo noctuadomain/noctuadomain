@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     url: 'https://noctuadomain.com',
     images: [
       {
-        url: 'https://noctuadomain.com/owl_halfmoon.png',
-        width: 900,
-        height: 900,
+        url: 'https://noctuadomain.com/logo-metadata.jpg',
+        width: 1200,
+        height: 630,
         alt: 'NoctuaDomain Logo'
       }
     ]
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     description: 'NoctuaDomain 3D animation and design studio',
     images: [
       {
-        url: 'https://noctuadomain.com/owl_halfmoon.png',
-        width: 900,
-        height: 900,
+        url: 'https://noctuadomain.com/logo-metadata.jpg',
+        width: 1200,
+        height: 630,
         alt: 'NoctuaDomain Logo'
       }
     ]
