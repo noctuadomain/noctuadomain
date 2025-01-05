@@ -6,7 +6,7 @@ import Youtube from '@/components/ui/icons/youtube';
 const socials = [
   {
     name: 'WhatsApp',
-    href: 'https://wa.me/971505637748',
+    href: 'https://wa.me/971581789113',
     icon: Whatsapp
   },
   {
